@@ -1,21 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\",
+  "WorkspaceRootPath": "D:\\Tri\\VaccineSchedule_PRN222\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5924F8BC-5161-4AB5-9811-480806E6D03B}|Service\\Service.csproj|c:\\users\\pc\\desktop\\game\\prn222_razor\\vaccineschedule_prn222\\service\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B63174D-400B-49B3-9E9F-FD4ECA5ED6CA}|ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj|d:\\tri\\vaccineschedule_prn222\\schedulevaccinerazor\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B63174D-400B-49B3-9E9F-FD4ECA5ED6CA}|ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj|solutionrelative:schedulevaccinerazor\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5924F8BC-5161-4AB5-9811-480806E6D03B}|Service\\Service.csproj|d:\\tri\\vaccineschedule_prn222\\service\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5924F8BC-5161-4AB5-9811-480806E6D03B}|Service\\Service.csproj|solutionrelative:service\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C971A65-C07E-4154-9E0B-BEBDF6B850C1}|Repository\\Repository.csproj|c:\\users\\pc\\desktop\\game\\prn222_razor\\vaccineschedule_prn222\\repository\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9C971A65-C07E-4154-9E0B-BEBDF6B850C1}|Repository\\Repository.csproj|d:\\tri\\vaccineschedule_prn222\\repository\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C971A65-C07E-4154-9E0B-BEBDF6B850C1}|Repository\\Repository.csproj|solutionrelative:repository\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA932144-35F0-4EA5-944F-57E7A17D96C5}|DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\pc\\desktop\\game\\prn222_razor\\vaccineschedule_prn222\\dataaccesslayer\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA932144-35F0-4EA5-944F-57E7A17D96C5}|DataAccessLayer\\DataAccessLayer.csproj|d:\\tri\\vaccineschedule_prn222\\dataaccesslayer\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA932144-35F0-4EA5-944F-57E7A17D96C5}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{029CF60F-6050-4F5E-ABBB-CBA1E8E76D5B}|BussinessLogicLayer\\BussinessLogicLayer.csproj|c:\\users\\pc\\desktop\\game\\prn222_razor\\vaccineschedule_prn222\\bussinesslogiclayer\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{029CF60F-6050-4F5E-ABBB-CBA1E8E76D5B}|BussinessLogicLayer\\BussinessLogicLayer.csproj|d:\\tri\\vaccineschedule_prn222\\bussinesslogiclayer\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{029CF60F-6050-4F5E-ABBB-CBA1E8E76D5B}|BussinessLogicLayer\\BussinessLogicLayer.csproj|solutionrelative:bussinesslogiclayer\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,16 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 22,
+          "SelectedChildIndex": 21,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -63,6 +59,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{5da8d69b-058a-4294-a87a-f4f7ae2983b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
@@ -119,54 +119,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\Service\\Class1.cs",
-              "RelativeDocumentMoniker": "Service\\Class1.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\Service\\Class1.cs",
-              "RelativeToolTip": "Service\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T14:26:00.989Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\appsettings.json",
+              "RelativeDocumentMoniker": "ScheduleVaccineRazor\\appsettings.json",
+              "ToolTip": "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\appsettings.json",
+              "RelativeToolTip": "ScheduleVaccineRazor\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-28T14:50:36.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\Repository\\Class1.cs",
-              "RelativeDocumentMoniker": "Repository\\Class1.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\Repository\\Class1.cs",
-              "RelativeToolTip": "Repository\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Class1.cs",
+              "RelativeDocumentMoniker": "Service\\Class1.cs",
+              "ToolTip": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Class1.cs",
+              "RelativeToolTip": "Service\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T14:25:40.978Z",
+              "WhenOpened": "2025-03-28T14:26:00.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\DataAccessLayer\\Class1.cs",
-              "RelativeDocumentMoniker": "DataAccessLayer\\Class1.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\DataAccessLayer\\Class1.cs",
-              "RelativeToolTip": "DataAccessLayer\\Class1.cs",
+              "DocumentMoniker": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Class1.cs",
+              "RelativeDocumentMoniker": "Repository\\Class1.cs",
+              "ToolTip": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Class1.cs",
+              "RelativeToolTip": "Repository\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T14:25:27.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T14:25:40.978Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\BussinessLogicLayer\\Class1.cs",
+              "DocumentMoniker": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\Class1.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Class1.cs",
+              "ToolTip": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\Class1.cs",
+              "RelativeToolTip": "DataAccessLayer\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T14:25:27.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\Class1.cs",
               "RelativeDocumentMoniker": "BussinessLogicLayer\\Class1.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\BussinessLogicLayer\\Class1.cs",
+              "ToolTip": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\Class1.cs",
               "RelativeToolTip": "BussinessLogicLayer\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T14:25:09.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T14:25:09.201Z"
             }
           ]
         }
