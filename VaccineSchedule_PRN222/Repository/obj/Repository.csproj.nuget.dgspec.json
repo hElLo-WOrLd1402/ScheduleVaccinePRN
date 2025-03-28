@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj": {}
+    "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj": {
+    "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj",
-        "projectName": "ScheduleVaccineRazor",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\obj\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\Game\\PRN222_Razor\\VaccineSchedule_PRN222\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -61,9 +61,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
