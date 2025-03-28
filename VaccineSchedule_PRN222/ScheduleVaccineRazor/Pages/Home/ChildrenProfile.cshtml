@@ -1,0 +1,70 @@
+﻿@page
+@model ScheduleVaccineRazor.Pages.Home.ChildrenProfileModel
+@{
+    ViewData["Title"] = "Children Profiles";
+}
+
+<h2>Children Profiles</h2>
+
+<!-- Form thêm hồ sơ trẻ em -->
+<form method="post">
+    <div class="form-group">
+        <label for="FullName">Full Name</label>
+        <input asp-for="NewProfile.FullName" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="BirthDate">Birth Date</label>
+        <input asp-for="NewProfile.BirthDate" type="date" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Gender">Gender</label>
+        <select asp-for="NewProfile.Gender" class="form-control">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+    <!-- Ẩn Parent ID nhưng vẫn gửi dữ liệu -->
+    <input type="hidden" asp-for="NewProfile.ParentId" />
+
+    <button type="submit" asp-page-handler="Add" class="btn btn-primary mt-2">Add Profile</button>
+</form>
+
+
+<hr />
+
+<!-- Danh sách hồ sơ trẻ em -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Birth Date</th>
+            <th>Gender</th>
+            <th>Parent ID</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var profile in Model.ChildrenProfiles)
+        {
+            <tr>
+                <td>@profile.FullName</td>
+                <td>@profile.BirthDate.ToString("yyyy-MM-dd")</td>
+                <td>@profile.Gender</td>
+                <td>@profile.ParentId</td>
+                <td>
+                    <form method="post">
+                        <input type="hidden" name="id" value="@profile.Id" />
+                        <button type="submit" asp-page-handler="Delete" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="post">
+                        <input type="hidden" name="id" value="@profile.Id" />
+                        <button type="submit" asp-page-handler="Delete" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                    <a asp-page="/Home/UpdateChildrenProfile" asp-route-id="@profile.Id" class="btn btn-warning btn-sm">Update</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

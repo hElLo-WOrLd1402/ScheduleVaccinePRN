@@ -1,0 +1,24 @@
+﻿@page
+@model ScheduleVaccineRazor.Pages.Home.UpdateChildrenProfileModel
+@{
+    ViewData["Title"] = "Update Children Profile";
+}
+
+<h2>Update Children Profile</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Profile.Id" />
+
+    <div class="form-group">
+        <label for="FullName">Full Name</label>
+        <input asp-for="Profile.FullName" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="BirthDate">Birth Date</label>
+        <input asp-for="Profile.BirthDate" type="date" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Save Changes</button>
+    <a asp-page="/Home/ChildrenProfile" class="btn btn-secondary mt-2">Cancel</a>
+</form>

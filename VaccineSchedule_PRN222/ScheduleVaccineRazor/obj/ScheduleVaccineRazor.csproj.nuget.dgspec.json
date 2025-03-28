@@ -4,14 +4,14 @@
     "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj": {}
   },
   "projects": {
-    "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj": {
+    "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj",
-        "projectName": "ScheduleVaccineRazor",
-        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj",
+        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
+        "projectName": "BussinessLogicLayer",
+        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
         "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
-        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\obj\\",
+        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,270 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectName": "DataAccessLayer",
+        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
+        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
+        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
+              },
+              "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj",
+        "projectName": "ScheduleVaccineRazor",
+        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj",
+        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
+        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
+              },
+              "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -65,6 +329,88 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
+        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
+              },
+              "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj"
+              },
+              "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
