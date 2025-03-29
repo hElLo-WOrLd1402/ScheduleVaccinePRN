@@ -1,9 +1,6 @@
 ﻿using BussinessLogicLayer;
 using DataAccessLayer.DAO;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Repository
@@ -12,6 +9,7 @@ namespace Repository
     {
         private readonly ChildrenProfileDAO _childrenProfileDAO;
 
+        // Inject DAO thông qua constructor
         public ChildrenProfileRepository()
         {
             _childrenProfileDAO = new ChildrenProfileDAO();

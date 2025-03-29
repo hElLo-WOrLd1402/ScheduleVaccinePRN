@@ -1,0 +1,44 @@
+﻿@page
+@model ScheduleVaccineRazor.Pages.Accounts.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>Register</h2>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">@Model.ErrorMessage</div>
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="RegisterData.Email"></label>
+        <input asp-for="RegisterData.Email" class="form-control" />
+        <span asp-validation-for="RegisterData.Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RegisterData.Username"></label>
+        <input asp-for="RegisterData.Username" class="form-control" />
+        <span asp-validation-for="RegisterData.Username" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RegisterData.Password"></label>
+        <input asp-for="RegisterData.Password" type="password" class="form-control" />
+        <span asp-validation-for="RegisterData.Password" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RegisterData.ConfirmPassword"></label>
+        <input asp-for="RegisterData.ConfirmPassword" type="password" class="form-control" />
+        <span asp-validation-for="RegisterData.ConfirmPassword" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Http; // Để sử dụng Session
 using Service;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using BussinessLogicLayer;
 
 namespace ScheduleVaccineRazor.Pages.Home
 {
@@ -17,24 +19,22 @@ namespace ScheduleVaccineRazor.Pages.Home
             _childrenProfileService = childrenProfileService;
         }
 
-        public List<ChildrenProfile> ChildrenProfiles { get; set; } = new();
-
         [BindProperty]
         public ChildrenProfile NewProfile { get; set; } = new();
 
+        public List<ChildrenProfile> ChildrenProfiles { get; set; } = new();
+
         public async Task<IActionResult> OnGetAsync()
         {
-            // Lấy ParentId từ Session
             string parentId = HttpContext.Session.GetString("ParentId");
             if (string.IsNullOrEmpty(parentId))
             {
-                return RedirectToPage("/Account/Login"); // Chuyển hướng nếu chưa đăng nhập
+                return RedirectToPage("/Account/Login");
             }
 
-            // Gán ParentId vào Model để khi submit form không bị lỗi
             NewProfile.ParentId = parentId;
+            NewProfile.Id = await GenerateChildIDAsync(); // Tạo ID mới trước khi hiển thị form
 
-            // Lọc danh sách hồ sơ trẻ em theo ParentId
             ChildrenProfiles = await _childrenProfileService.GetAllChildrenProfilesAsync();
             ChildrenProfiles = ChildrenProfiles.FindAll(cp => cp.ParentId == parentId);
 
@@ -43,7 +43,6 @@ namespace ScheduleVaccineRazor.Pages.Home
 
         public async Task<IActionResult> OnPostAddAsync()
         {
-            // Lấy ParentId từ Session
             string parentId = HttpContext.Session.GetString("ParentId");
             if (string.IsNullOrEmpty(parentId))
             {
@@ -51,27 +50,48 @@ namespace ScheduleVaccineRazor.Pages.Home
                 return Page();
             }
 
-            // Gán ParentId vào hồ sơ mới trước khi kiểm tra ModelState
             NewProfile.ParentId = parentId;
-
-            // Xóa trạng thái lỗi nếu ParentId bị thiếu
-            ModelState.ClearValidationState(nameof(NewProfile.ParentId));
-
-            // Kiểm tra ModelState sau khi gán giá trị hợp lệ
-            if (!TryValidateModel(NewProfile))
-            {
-                return Page();
-            }
+            NewProfile.Id = await GenerateChildIDAsync(); // Sinh ID trước khi lưu
 
             await _childrenProfileService.AddChildrenProfileAsync(NewProfile);
-            return RedirectToPage();
-        }
 
+            ChildrenProfiles = await _childrenProfileService.GetAllChildrenProfilesAsync();
+            ChildrenProfiles = ChildrenProfiles.FindAll(cp => cp.ParentId == parentId);
+
+            return Page();
+        }
 
         public async Task<IActionResult> OnPostDeleteAsync(string id)
         {
             await _childrenProfileService.DeleteChildrenProfileAsync(id);
             return RedirectToPage();
+        }
+
+        // 🔹 Tạo ID dạng C00001, C00002, ...
+        private async Task<string> GenerateChildIDAsync()
+        {
+            var profiles = await _childrenProfileService.GetAllChildrenProfilesAsync();
+            if (profiles == null || !profiles.Any())
+            {
+                return "C00001";
+            }
+
+            int maxOrder = profiles
+                .Select(p => GetChildOrder(p.Id))
+                .Max();
+
+            return $"C{(maxOrder + 1).ToString().PadLeft(5, '0')}";
+        }
+
+        private int GetChildOrder(string childId)
+        {
+            if (string.IsNullOrWhiteSpace(childId) || childId.Length < 2)
+            {
+                return 0;
+            }
+
+            string orderPart = childId.Substring(1); // Lấy phần số sau 'C'
+            return int.TryParse(orderPart, out int orderNumber) ? orderNumber : 0;
         }
     }
 }

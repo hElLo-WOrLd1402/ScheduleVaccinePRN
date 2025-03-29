@@ -15,7 +15,7 @@ public partial class ChildrenProfile
 
     public string Gender { get; set; } = null!;
 
-    public virtual Account Parent { get; set; } = null!;
+    public virtual Account? Parent { get; set; } = null!;
 
     public virtual ICollection<Schedule> Schedules { get; set; } = new List<Schedule>();
 }

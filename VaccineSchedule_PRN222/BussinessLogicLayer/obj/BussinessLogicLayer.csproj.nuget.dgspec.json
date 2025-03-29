@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {}
+    "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+    "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
+        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
         "projectName": "BussinessLogicLayer",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\obj\\",
+        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
+        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
+        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -83,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

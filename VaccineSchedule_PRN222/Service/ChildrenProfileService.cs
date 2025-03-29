@@ -8,8 +8,7 @@ namespace Service
     public class ChildrenProfileService : IChildrenProfileService
     {
         private readonly IChildrenProfileRepository _childrenProfileRepository;
-
-        // Dùng DI thay vì khởi tạo trực tiếp
+      
         public ChildrenProfileService(IChildrenProfileRepository childrenProfileRepository)
         {
             _childrenProfileRepository = childrenProfileRepository;

@@ -10,7 +10,9 @@ namespace Repository
 {
     public interface IAccountRepository
     {
+        Task<List<Account>> GetAllAccountsAsync();
         Task<Account> GetAccountByEmailAsync(string email);
         Task<bool> UpdateAccountAsync(Account account);
+        Task<Account> CreateAccountAsync(Account account);
     }
 }

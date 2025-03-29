@@ -1,7 +1,7 @@
 ﻿
 using BussinessLogicLayer;
 using Service;
-
+using Repository;
 namespace ScheduleVaccineRazor
 {
     public static class DependencyInjection
@@ -10,8 +10,9 @@ namespace ScheduleVaccineRazor
         {
             // Đăng ký các dịch vụ
             services.AddScoped<IAccountService, AccountService>();
-            services.AddScoped<IScheduleService, ScheduleService>();
-
+            //services.AddScoped<IScheduleService, ScheduleService>();
+            services.AddScoped<IChildrenProfileService, ChildrenProfileService>();
+            services.AddScoped<IChildrenProfileRepository, ChildrenProfileRepository>();
             return services;
         }
     }

@@ -45,5 +45,24 @@ namespace Service
             account.Username = newUsername;
             return await accountRepository.UpdateAccountAsync(account);
         }
+
+        // ✅ Thêm CreateAccountAsync()
+        public async Task<Account> CreateAccountAsync(Account account)
+        {
+            // Kiểm tra email đã tồn tại chưa
+            var existingAccount = await accountRepository.GetAccountByEmailAsync(account.Email);
+            if (existingAccount != null)
+            {
+                throw new Exception("Email already exists.");
+            }
+
+            // Hash mật khẩu trước khi lưu (nếu có)
+            account.PasswordHash = BCrypt.Net.BCrypt.HashPassword(account.PasswordHash);
+
+            return await accountRepository.CreateAccountAsync(account);
+        }
+
+        public async Task<List<Account>> GetAllAccountsAsync() =>
+            await accountRepository.GetAllAccountsAsync();
     }
 }

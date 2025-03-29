@@ -11,8 +11,4 @@
     <ProjectReference Include="..\Service\Service.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Dashboard\" />
-  </ItemGroup>
-
 </Project>

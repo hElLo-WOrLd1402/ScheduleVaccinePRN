@@ -50,13 +50,7 @@
                 <td>@profile.FullName</td>
                 <td>@profile.BirthDate.ToString("yyyy-MM-dd")</td>
                 <td>@profile.Gender</td>
-                <td>@profile.ParentId</td>
-                <td>
-                    <form method="post">
-                        <input type="hidden" name="id" value="@profile.Id" />
-                        <button type="submit" asp-page-handler="Delete" class="btn btn-danger btn-sm">Delete</button>
-                    </form>
-                </td>
+                <td>@profile.ParentId</td>             
                 <td>
                     <form method="post">
                         <input type="hidden" name="id" value="@profile.Id" />
