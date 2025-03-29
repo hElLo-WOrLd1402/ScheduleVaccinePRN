@@ -1,9 +1,6 @@
 ﻿using BussinessLogicLayer;
 using Repository;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Service
@@ -12,9 +9,10 @@ namespace Service
     {
         private readonly IChildrenProfileRepository _childrenProfileRepository;
 
-        public ChildrenProfileService()
+        // Dùng DI thay vì khởi tạo trực tiếp
+        public ChildrenProfileService(IChildrenProfileRepository childrenProfileRepository)
         {
-            _childrenProfileRepository = new ChildrenProfileRepository();
+            _childrenProfileRepository = childrenProfileRepository;
         }
 
         public async Task<List<ChildrenProfile>> GetAllChildrenProfilesAsync() =>

@@ -11,9 +11,9 @@ namespace ScheduleVaccineRazor.Pages.Home
     {
         private readonly IChildrenProfileService _childrenProfileService;
 
-        public UpdateChildrenProfileModel()
+        public UpdateChildrenProfileModel(IChildrenProfileService childrenProfileService)
         {
-            _childrenProfileService = new ChildrenProfileService();
+            _childrenProfileService = childrenProfileService;
         }
 
         [BindProperty]

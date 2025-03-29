@@ -1,12 +1,15 @@
-﻿using System;
+﻿using BussinessLogicLayer;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Service
 {
-    public class IScheduleService 
+    public interface IScheduleService
     {
+        Task<List<Schedule>> GetAllSchedulesAsync();
+        Task<Schedule?> GetScheduleByIdAsync(string id);
+        Task<bool> AddScheduleAsync(Schedule schedule);
+        Task<bool> UpdateScheduleAsync(Schedule schedule);
+        Task<bool> DeleteScheduleAsync(string id);
     }
 }
