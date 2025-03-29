@@ -9,9 +9,9 @@ namespace Repository
     {
         private readonly ScheduleDAO _scheduleDAO;
 
-        public ScheduleRepository(VaccineScheduleDbContext context)
+        public ScheduleRepository()
         {
-            _scheduleDAO = new ScheduleDAO(context);
+            _scheduleDAO = new ScheduleDAO();
         }
 
         public async Task<List<Schedule>> GetAllAsync() =>

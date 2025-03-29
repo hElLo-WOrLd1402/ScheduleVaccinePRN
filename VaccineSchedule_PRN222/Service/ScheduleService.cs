@@ -31,8 +31,8 @@ namespace Service
 
         public async Task<bool> UpdateScheduleAsync(Schedule schedule)
         {
-            if (await _scheduleRepository.GetByIdAsync(schedule.Id) == null)
-                return false;
+            //if (await _scheduleRepository.GetByIdAsync(schedule.Id) == null)
+            //    return false;
 
             await _scheduleRepository.UpdateAsync(schedule);
             return true;

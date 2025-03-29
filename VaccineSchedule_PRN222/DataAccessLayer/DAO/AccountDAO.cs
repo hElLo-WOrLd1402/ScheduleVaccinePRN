@@ -14,7 +14,11 @@ namespace DataAccessLayer.DAO
             using var db = new VaccineScheduleDbContext();
             return await db.Accounts.FirstOrDefaultAsync(c => c.Email == email);
         }
-
+        public static async Task<Account?> GetByIdAsync(string id)
+        {
+            using var db = new VaccineScheduleDbContext();
+            return await db.Accounts.Include(c => c.ChildrenProfiles).FirstOrDefaultAsync(c => c.Id == id);
+        }
         // Create (Thêm tài khoản mới)
         public static async Task<Account> CreateAccountAsync(Account account)
         {

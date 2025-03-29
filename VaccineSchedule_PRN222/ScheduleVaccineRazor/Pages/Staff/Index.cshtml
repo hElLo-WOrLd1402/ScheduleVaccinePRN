@@ -1,4 +1,50 @@
 ﻿@page
 @model ScheduleVaccineRazor.Pages.Staff.IndexModel
 @{
+    ViewData["Title"] = "ScheduleIndex";
 }
+
+<h1>ScheduleIndex</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule[0].AppointmentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule[0].Child)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule[0].Vaccine)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Schedule)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AppointmentDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Child.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vaccine.Name)
+                </td>
+                <td>
+                    <a asp-page="/Staff/EditSchedule" asp-route-id="@item.Id">Edit</a>
+                    <a asp-page="/Staff/DeleteSchedule" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
