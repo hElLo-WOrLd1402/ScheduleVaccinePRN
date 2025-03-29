@@ -12,9 +12,9 @@ namespace ScheduleVaccineRazor.Pages.Home
     {
         private readonly IChildrenProfileService _childrenProfileService;
 
-        public ChildrenProfileModel()
+        public ChildrenProfileModel(IChildrenProfileService childrenProfileService)
         {
-            _childrenProfileService = new ChildrenProfileService();
+            _childrenProfileService = childrenProfileService;
         }
 
         public List<ChildrenProfile> ChildrenProfiles { get; set; } = new();
