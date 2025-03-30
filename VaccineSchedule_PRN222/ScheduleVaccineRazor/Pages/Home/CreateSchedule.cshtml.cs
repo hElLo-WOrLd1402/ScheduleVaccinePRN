@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using BussinessLogicLayer;
 using Service;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.SignalR;
 
 namespace ScheduleVaccineRazor.Pages.Home
 {
@@ -67,7 +68,9 @@ namespace ScheduleVaccineRazor.Pages.Home
                 Status = "Scheduled",
                 AppointmentDate = Schedule.AppointmentDate,
             };
-
+            // Gửi thông báo SignalR khi thuốc mới được thêm
+            var hubContext = HttpContext.RequestServices.GetRequiredService<IHubContext<SignalrServer>>();
+            await hubContext.Clients.All.SendAsync("ItemCreated", ScheduleId);
             await _scheduleService.AddScheduleAsync(newSchedule);
 
             return RedirectToPage("/Home/ScheduleIndex");

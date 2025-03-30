@@ -87,3 +87,16 @@
         }
     });
 </script>
+@* signalR *@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+<script>
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/signalrServer")
+        .build();
+
+    connection.start().catch(err => console.error(err.toString()));
+
+    connection.on("ItemCreated", function (ScheduleId) {
+        alert("New player added: " + ScheduleId);
+    });
+</script>
