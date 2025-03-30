@@ -11,5 +11,7 @@ namespace Service
         Task<bool> ChangePasswordAsync(string email, string newPassword);
         Task<bool> ChangeUsernameAsync(string email, string newUsername);
         Task<Account> CreateAccountAsync(Account account);
+        Task<Account?> GetByIdAsync(string id);
+
     }
 }

@@ -14,5 +14,6 @@ namespace Repository
         Task<Account> GetAccountByEmailAsync(string email);
         Task<bool> UpdateAccountAsync(Account account);
         Task<Account> CreateAccountAsync(Account account);
+        Task<Account?> GetByIdAsync(string id);
     }
 }

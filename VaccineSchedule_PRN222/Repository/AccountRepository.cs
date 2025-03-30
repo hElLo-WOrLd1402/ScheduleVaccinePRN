@@ -19,6 +19,11 @@ namespace Repository
         public async Task<List<Account>> GetAllAccountsAsync() =>
           await AccountDAO.GetAllAccountsAsync();
 
+        public async Task<Account?> GetByIdAsync(string id)
+        {
+            return await AccountDAO.GetByIdAsync(id);
+
+        }
 
         public async Task<bool> UpdateAccountAsync(Account account) =>
           await AccountDAO.UpdateAccountAsync(account);

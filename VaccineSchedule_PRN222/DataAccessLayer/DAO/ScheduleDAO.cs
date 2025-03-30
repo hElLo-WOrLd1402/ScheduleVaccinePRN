@@ -10,9 +10,9 @@ namespace DataAccessLayer.DAO
     {
         private readonly VaccineScheduleDbContext _context;
 
-        public ScheduleDAO(VaccineScheduleDbContext context)
+        public ScheduleDAO()
         {
-            _context = context;
+            _context = new VaccineScheduleDbContext();
         }
 
         // Lấy tất cả lịch hẹn

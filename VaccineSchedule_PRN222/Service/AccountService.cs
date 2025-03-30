@@ -1,4 +1,5 @@
 ﻿using BussinessLogicLayer;
+using DataAccessLayer.DAO;
 using Repository;
 using System.Threading.Tasks;
 
@@ -15,7 +16,11 @@ namespace Service
 
         public async Task<Account> GetAccountByEmailAsync(string email) =>
             await accountRepository.GetAccountByEmailAsync(email);
+        public async Task<Account?> GetByIdAsync(string id)
+        {
+            return await accountRepository.GetByIdAsync(id);
 
+        }
         public async Task<bool> UpdateAccountAsync(Account account) =>
             await accountRepository.UpdateAccountAsync(account);
 

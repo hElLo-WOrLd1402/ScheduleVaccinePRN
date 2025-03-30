@@ -1,0 +1,53 @@
+﻿@page
+@model ScheduleVaccineRazor.Pages.Staff.EditScheduleModel
+
+@{
+    ViewData["Title"] = "EditSchedule";
+}
+
+<h1>EditSchedule</h1>
+
+<h4>Schedule</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Schedule.Id" />
+            <div class="form-group">
+                <label asp-for="Schedule.ChildId" class="control-label"></label>
+                <select asp-for="Schedule.ChildId" class="form-control" asp-items="ViewBag.ChildId"></select>
+                <span asp-validation-for="Schedule.ChildId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Schedule.VaccineId" class="control-label"></label>
+                <select asp-for="Schedule.VaccineId" class="form-control" asp-items="ViewBag.VaccineId"></select>
+                <span asp-validation-for="Schedule.VaccineId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Schedule.AppointmentDate" class="control-label"></label>
+                <input asp-for="Schedule.AppointmentDate" class="form-control" />
+                <span asp-validation-for="Schedule.AppointmentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Schedule.Status" class="control-label"></label>
+                <select asp-for="Schedule.Status" class="form-control">
+                    <option value="Scheduled">Scheduled</option>
+                    <option value="Completed">Completed</option>
+                </select>
+                <span asp-validation-for="Schedule.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="/Staff/Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
