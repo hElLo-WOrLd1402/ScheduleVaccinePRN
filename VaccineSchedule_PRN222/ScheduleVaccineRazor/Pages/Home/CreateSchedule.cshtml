@@ -2,41 +2,88 @@
 @model ScheduleVaccineRazor.Pages.Home.CreateScheduleModel
 
 @{
-    ViewData["Title"] = "CreateSchedule";
+    ViewData["Title"] = "Đặt lịch hẹn";
 }
 
-<h1>CreateSchedule</h1>
+<div class="container">
+    <h2 class="text-center">Đặt Lịch Tiêm Vaccine</h2>
 
-<h4>Schedule</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Schedule.ChildId" class="control-label"></label>
-                <select asp-for="Schedule.ChildId" class ="form-control" asp-items="ViewBag.ChildId"></select>
+    <form method="post">
+        <div class="row">
+            <!-- Chọn trẻ em -->
+            <div class="col-md-6">
+                <label asp-for="Schedule.ChildId" class="form-label">Chọn Trẻ Em</label>
+                <select asp-for="Schedule.ChildId" class="form-control" asp-items="ViewBag.ChildId"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="Schedule.VaccineId" class="control-label"></label>
-                <select asp-for="Schedule.VaccineId" class ="form-control" asp-items="ViewBag.VaccineId"></select>
+
+            <!-- Chọn Vaccine -->
+            <div class="col-md-6">
+                <label asp-for="Schedule.VaccineId" class="form-label">Chọn Vaccine</label>
+                <select asp-for="Schedule.VaccineId" class="form-control" asp-items="ViewBag.VaccineId"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="Schedule.AppointmentDate" class="control-label"></label>
-                <input asp-for="Schedule.AppointmentDate" class="form-control" />
-                <span asp-validation-for="Schedule.AppointmentDate" class="text-danger"></span>
+        </div>
+
+        <div class="row mt-3">
+            <!-- Chọn ngày -->
+            <div class="col-md-6">
+                <label class="form-label">Chọn Ngày</label>
+                <input type="text" id="datepicker" class="form-control" placeholder="Chọn ngày" />
+                <input type="hidden" asp-for="Schedule.AppointmentDate" id="appointmentDateInput" />
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+            <!-- Chọn giờ -->
+            <div class="col-md-6">
+                <label class="form-label">Chọn Giờ</label>
+                <div id="timeSlots" class="d-flex flex-wrap gap-2">
+                    <!-- Các giờ sẽ hiển thị ở đây -->
+                </div>
+                <input type="hidden" id="appointmentTimeInput" />
             </div>
-        </form>
-    </div>
+        </div>
+
+        <button id="confirmBtn" type="submit" class="btn btn-primary mt-3" style="display: none;">Xác nhận</button>
+    </form>
 </div>
 
-<div>
-    <a asp-page="/Home/ScheduleIndex">Back to List</a>
-</div>
+<!-- Thêm Flatpickr -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let selectedDate = null;
+        let selectedTime = null;
+
+        // Khởi tạo lịch chọn ngày
+        flatpickr("#datepicker", {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+            onChange: function (selectedDates, dateStr) {
+                selectedDate = dateStr;
+                document.getElementById("appointmentDateInput").value = dateStr;
+                loadTimeSlots();
+            }
+        });
+
+        // Hàm tạo danh sách giờ
+        function loadTimeSlots() {
+            let timeSlots = ["10:00 AM", "11:00 AM", "1:00 PM", "2:30 PM", "4:00 PM"];
+            let container = document.getElementById("timeSlots");
+            container.innerHTML = ""; // Xóa danh sách cũ
+
+            timeSlots.forEach(time => {
+                let button = document.createElement("button");
+                button.classList.add("btn", "btn-outline-primary");
+                button.textContent = time;
+                button.onclick = function () {
+                    document.querySelectorAll("#timeSlots button").forEach(btn => btn.classList.remove("active"));
+                    button.classList.add("active");
+                    selectedTime = time;
+                    document.getElementById("appointmentTimeInput").value = time;
+                    document.getElementById("confirmBtn").style.display = "block"; // Hiện nút xác nhận
+                };
+                container.appendChild(button);
+            });
+        }
+    });
+</script>

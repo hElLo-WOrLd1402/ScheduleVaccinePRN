@@ -100,7 +100,7 @@ namespace ScheduleVaccineRazor.Pages.Home
         }
     }
 
-    public class CreateScheduleInput
+    public class CreateScheduleInput1
     {
         [Required]
         public string ChildId { get; set; } = string.Empty;

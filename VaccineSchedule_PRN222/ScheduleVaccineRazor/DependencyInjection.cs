@@ -13,7 +13,8 @@ namespace ScheduleVaccineRazor
             services.AddScoped<IScheduleService, ScheduleService>();
             services.AddScoped<IChildrenProfileService, ChildrenProfileService>();
             services.AddScoped<IVaccineService, VaccineService>();
-
+            services.AddScoped<IPaymentService, PaymentService>();
+            services.AddScoped<IPaymentRepository, PaymentRepository>();
             services.AddScoped<IChildrenProfileRepository, ChildrenProfileRepository>();
             services.AddScoped<IVaccineRepository, VaccineRepository>();
             services.AddScoped<IScheduleRepository, ScheduleRepository>();

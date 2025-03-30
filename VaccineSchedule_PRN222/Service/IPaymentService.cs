@@ -11,5 +11,6 @@ namespace Service
         Task<bool> AddPaymentAsync(Payment payment);
         Task<bool> UpdatePaymentAsync(Payment payment);
         Task<bool> DeletePaymentAsync(string id);
+        Task<List<Payment>> GetPendingPaymentsAsync();
     }
 }

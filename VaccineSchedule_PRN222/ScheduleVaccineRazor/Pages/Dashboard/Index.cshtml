@@ -1,4 +1,59 @@
 ﻿@page
 @model ScheduleVaccineRazor.Pages.Dashboard.IndexModel
+
 @{
+    ViewData["Title"] = "Dashboard";
 }
+
+<h1>Dashboard</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card p-3 bg-primary text-white">
+            <h3>Tổng số lịch hẹn</h3>
+            <h2>@Model.TotalAppointments</h2>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card p-3 bg-success text-white">
+            <h3>Tổng doanh thu</h3>
+            <h2>@Model.TotalRevenue.ToString("C")</h2>
+        </div>
+    </div>
+</div>
+
+<h2 class="mt-4">Biểu đồ doanh thu theo tháng</h2>
+<canvas id="revenueChart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var ctx = document.getElementById('revenueChart').getContext('2d');
+        var revenueData = @Html.Raw(Json.Serialize(Model.RevenueByMonth));
+
+        var labels = revenueData.map(x => x.Month);
+        var data = revenueData.map(x => x.Revenue);
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Doanh thu (VND)',
+                    data: data,
+                    backgroundColor: 'rgba(75, 192, 192, 0.7)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+</script>

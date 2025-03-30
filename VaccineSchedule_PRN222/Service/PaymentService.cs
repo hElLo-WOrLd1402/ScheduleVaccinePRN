@@ -46,5 +46,9 @@ namespace Service
             await _paymentRepository.DeleteAsync(id);
             return true;
         }
+
+        public async  Task<List<Payment>> GetPendingPaymentsAsync() =>
+            await _paymentRepository.GetPendingPaymentsAsync();
+
     }
 }

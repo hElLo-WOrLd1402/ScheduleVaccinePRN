@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using BussinessLogicLayer;
 using Service;
+using System.ComponentModel.DataAnnotations;
 
 namespace ScheduleVaccineRazor.Pages.Home
 {
@@ -23,24 +24,97 @@ namespace ScheduleVaccineRazor.Pages.Home
             _vaccineService = vaccineService;
         }
 
-        public List<Schedule> Schedule { get;set; } = new();
+        public List<Schedule> Schedule { get; set; } = new();
+        public List<ChildrenProfile> ChildrenProfiles { get; set; } = new(); // Danh sách hồ sơ trẻ
+        public List<Vaccine> Vaccines { get; set; } = new(); // Danh sách vaccine
+
+        [BindProperty]
+        public CreateScheduleInput ScheduleInput { get; set; } = new();
 
         public async Task<IActionResult> OnGetAsync()
         {
             string parentId = HttpContext.Session.GetString("ParentId");
-            List<ChildrenProfile> ChildrenProfiles = await _childrenProfileService.GetAllChildrenProfilesAsync();
-            ChildrenProfiles = ChildrenProfiles.FindAll(cp => cp.ParentId == parentId);
 
-            if (ChildrenProfiles == null || !ChildrenProfiles.Any())
+            // Lấy danh sách hồ sơ trẻ của phụ huynh hiện tại
+            ChildrenProfiles = await _childrenProfileService.GetAllChildrenProfilesAsync();
+            ChildrenProfiles = ChildrenProfiles.Where(cp => cp.ParentId == parentId).ToList();
+
+            if (!ChildrenProfiles.Any())
             {
                 TempData["ErrorMessage"] = "No children profiles found.";
                 return RedirectToPage("/Home/Menu");
             }
 
+            // Lấy danh sách lịch hẹn của trẻ thuộc phụ huynh hiện tại
             Schedule = await _scheduleService.GetAllSchedulesAsync();
-            Schedule = Schedule.Where(Schedule => Schedule.Child.ParentId == parentId).ToList();
+            Schedule = Schedule.Where(s => s.Child.ParentId == parentId).ToList();
+
+            // Lấy danh sách vaccine
+            Vaccines = await _vaccineService.GetAllAsync();
 
             return Page();
         }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                TempData["ErrorMessage"] = "Invalid input.";
+                return RedirectToPage();
+            }
+
+            var scheduleId = await GenerateID();
+
+            var newSchedule = new Schedule
+            {
+                Id = scheduleId,
+                ChildId = ScheduleInput.ChildId,
+                VaccineId = ScheduleInput.VaccineId,
+                Status = "Scheduled",
+                AppointmentDate = ScheduleInput.AppointmentDate,
+            };
+
+            await _scheduleService.AddScheduleAsync(newSchedule);
+            TempData["SuccessMessage"] = "Lịch hẹn đã được đặt thành công!";
+            return RedirectToPage();
+        }
+
+        private async Task<string> GenerateID()
+        {
+            var schedules = await _scheduleService.GetAllSchedulesAsync();
+            if (schedules == null || !schedules.Any())
+            {
+                return "S00001";
+            }
+
+            int maxOrder = schedules
+                .Select(a => GetScheduleOrder(a.Id))
+                .Max();
+
+            return $"S{(maxOrder + 1).ToString().PadLeft(5, '0')}";
+        }
+
+        private int GetScheduleOrder(string scheduleId)
+        {
+            if (string.IsNullOrWhiteSpace(scheduleId) || scheduleId.Length < 2)
+            {
+                return 0;
+            }
+
+            string orderPart = scheduleId.Substring(1);
+            return int.TryParse(orderPart, out int orderNumber) ? orderNumber : 0;
+        }
+    }
+
+    public class CreateScheduleInput
+    {
+        [Required]
+        public string ChildId { get; set; } = string.Empty;
+
+        [Required]
+        public string VaccineId { get; set; } = string.Empty;
+
+        [Required]
+        public DateTime AppointmentDate { get; set; } = DateTime.Now.AddDays(7);
     }
 }

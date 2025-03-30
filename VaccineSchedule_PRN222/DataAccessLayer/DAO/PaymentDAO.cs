@@ -7,50 +7,58 @@ using System.Threading.Tasks;
 namespace DataAccessLayer.DAO
 {
     public class PaymentDAO
-    {
-        private readonly VaccineScheduleDbContext _context;
-
-        public PaymentDAO(VaccineScheduleDbContext context)
-        {
-            _context = context;
-        }
+    {       
 
         // Lấy tất cả các thanh toán
-        public async Task<List<Payment>> GetAllAsync()
+        public async Task<List<Payment>> GetAllPaymentAsync()
         {
-            return await _context.Payments.Include(p => p.Schedule).ToListAsync();
+            using var db = new VaccineScheduleDbContext();
+            return await db.Payments.Include(p => p.Schedule).ToListAsync();
         }
 
         // Lấy thanh toán theo ID
-        public async Task<Payment?> GetByIdAsync(string id)
+        public async Task<Payment?> GetPaymentByIdAsync(string id)
         {
-            return await _context.Payments.Include(p => p.Schedule)
+            using var db = new VaccineScheduleDbContext();
+            return await db.Payments.Include(p => p.Schedule)
                                           .FirstOrDefaultAsync(p => p.Id == id);
         }
 
         // Thêm thanh toán mới
         public async Task AddAsync(Payment payment)
         {
-            await _context.Payments.AddAsync(payment);
-            await _context.SaveChangesAsync();
+            using var db = new VaccineScheduleDbContext();
+            await db.Payments.AddAsync(payment);
+            await db.SaveChangesAsync();
         }
 
         // Cập nhật thông tin thanh toán
         public async Task UpdateAsync(Payment payment)
         {
-            _context.Payments.Update(payment);
-            await _context.SaveChangesAsync();
+            using var db = new VaccineScheduleDbContext();
+            db.Payments.Update(payment);
+            await db.SaveChangesAsync();
         }
 
         // Xóa thanh toán theo ID
-        public async Task DeleteAsync(string id)
+        public async Task DeletePaymentAsync(string id)
         {
-            var payment = await _context.Payments.FindAsync(id);
+            using var db = new VaccineScheduleDbContext();
+            var payment = await db.Payments.FindAsync(id);
             if (payment != null)
             {
-                _context.Payments.Remove(payment);
-                await _context.SaveChangesAsync();
+                db.Payments.Remove(payment);
+                await db.SaveChangesAsync();
             }
+        }
+
+        // Lấy danh sách thanh toán có trạng thái "Pending"
+        public async Task<List<Payment>> GetPendingPaymentsAsync()
+        {
+            using var db = new VaccineScheduleDbContext();
+            return await db.Payments.Include(p => p.Schedule)
+                                          .Where(p => p.PaymentStatus == "Pending")
+                                          .ToListAsync();
         }
     }
 }

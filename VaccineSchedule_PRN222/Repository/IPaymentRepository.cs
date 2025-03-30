@@ -11,5 +11,6 @@ namespace Repository
         Task AddAsync(Payment payment);
         Task UpdateAsync(Payment payment);
         Task DeleteAsync(string id);
+        Task<List<Payment>> GetPendingPaymentsAsync();
     }
 }

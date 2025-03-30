@@ -2,47 +2,99 @@
 @model ScheduleVaccineRazor.Pages.Home.ScheduleIndexModel
 
 @{
-    ViewData["Title"] = "ScheduleIndex";
+    ViewData["Title"] = "Lịch hẹn tiêm vaccine";
 }
 
-<h1>ScheduleIndex</h1>
+<h1>Lịch hẹn tiêm vaccine</h1>
 
-<p>
-    <a asp-page="/Home/CreateSchedule">Create New</a>
-</p>
-<table class="table">
+<!-- Form tạo lịch hẹn -->
+<form method="post">
+    <div class="form-group">
+        <label for="appointmentDate">Chọn ngày hẹn:</label>
+        <input type="text" id="appointmentDate" name="AppointmentDate" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="childId">Chọn trẻ:</label>
+        <select id="childId" name="ChildId" class="form-control" required>
+            @if (Model.ChildrenProfiles != null)
+            {
+                @foreach (var child in Model.ChildrenProfiles)
+                {
+                    <option value="@child.Id">@child.FullName</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="vaccineId">Chọn vaccine:</label>
+        <select id="vaccineId" name="VaccineId" class="form-control" required>
+            @if (Model.Vaccines != null)
+            {
+                @foreach (var vaccine in Model.Vaccines)
+                {
+                    <option value="@vaccine.Id">@vaccine.Name</option>
+                }
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-success mt-2">Đặt lịch</button>
+</form>
+
+<!-- Ô nhập để lọc lịch theo ngày -->
+<div class="form-group mt-4">
+    <label for="datepicker">Lọc lịch theo ngày:</label>
+    <input type="text" id="datepicker" class="form-control" placeholder="Chọn ngày" />
+</div>
+
+<!-- Bảng danh sách lịch hẹn -->
+<table class="table mt-3">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Schedule[0].AppointmentDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Schedule[0].Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Schedule[0].Child)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Schedule[0].Vaccine)
-            </th>
+            <th>Ngày hẹn</th>
+            <th>Trạng thái</th>
+            <th>Trẻ</th>
+            <th>Vaccine</th>
         </tr>
     </thead>
-    <tbody>
-@foreach (var item in Model.Schedule) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AppointmentDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Child.FullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Vaccine.Name)
-            </td>
-        </tr>
-}
+    <tbody id="scheduleTable">
+        @if (Model.Schedule != null)
+        {
+            @foreach (var item in Model.Schedule)
+            {
+                <tr data-date="@item.AppointmentDate.ToString("yyyy-MM-dd")">
+                    <td>@item.AppointmentDate.ToString("yyyy-MM-dd")</td>
+                    <td>@item.Status</td>
+                    <td>@item.Child.FullName</td>
+                    <td>@item.Vaccine.Name</td>
+                </tr>
+            }
+        }
     </tbody>
 </table>
+
+<!-- Nút thanh toán duy nhất -->
+@if (Model.Schedule != null && Model.Schedule.Any(s => s.Status != "Paid"))
+{
+    <div class="text-center mt-4">
+        <a asp-page="/Home/SchedulePayment" class="btn btn-primary">Thanh toán tất cả lịch hẹn chưa thanh toán</a>
+    </div>
+}
+
+<!-- Thêm Flatpickr -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        flatpickr("#appointmentDate", { dateFormat: "Y-m-d", minDate: "today" });
+        flatpickr("#datepicker", {
+            dateFormat: "Y-m-d",
+            onChange: function(selectedDates, dateStr) {
+                let rows = document.querySelectorAll("#scheduleTable tr");
+                rows.forEach(row => {
+                    let rowDate = row.getAttribute("data-date");
+                    row.style.display = (rowDate === dateStr || dateStr === "") ? "" : "none";
+                });
+            }
+        });
+    });
+</script>

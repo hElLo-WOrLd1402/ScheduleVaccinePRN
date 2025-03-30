@@ -1,0 +1,83 @@
+﻿@page 
+@model ScheduleVaccineRazor.Pages.Home.SchedulePaymentModel
+
+@{
+    ViewData["Title"] = "Thanh toán lịch hẹn";
+}
+
+<h1>Thanh toán lịch hẹn</h1>
+
+@if (Model.Schedules != null && Model.Schedules.Any())
+{
+    <div class="card p-3">
+        <h4>Danh sách lịch hẹn</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Chọn</th>
+                    <th>Ngày hẹn</th>
+                    <th>Trẻ</th>
+                    <th>Vaccine</th>
+                    <th>Giá</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var schedule in Model.Schedules)
+                {
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="schedule-checkbox" data-price="@schedule.Vaccine.Price" value="@schedule.Id">
+                        </td>
+                        <td>@schedule.AppointmentDate.ToString("yyyy-MM-dd")</td>
+                        <td>@schedule.Child.FullName</td>
+                        <td>@schedule.Vaccine.Name</td>
+                        <td>@schedule.Vaccine.Price.ToString("C")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <h5>Tổng tiền: <span id="totalPrice">0</span></h5>
+
+        <form method="post" id="paymentForm">
+            <input type="hidden" name="SelectedSchedules" id="selectedSchedules">
+            <button type="submit" class="btn btn-primary mt-3">Xác nhận thanh toán</button>
+        </form>
+    </div>
+}
+else
+{
+    <p class="text-danger">Không có lịch hẹn nào cần thanh toán!</p>
+}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let checkboxes = document.querySelectorAll(".schedule-checkbox");
+        let totalPriceElement = document.getElementById("totalPrice");
+        let selectedSchedulesInput = document.getElementById("selectedSchedules");
+
+        function updateTotalPrice() {
+            let total = 0;
+            let selectedIds = [];
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    total += parseFloat(checkbox.getAttribute("data-price"));
+                    selectedIds.push(checkbox.value);
+                }
+            });
+            totalPriceElement.textContent = total.toLocaleString("vi-VN", { style: "currency", currency: "VND" });
+            selectedSchedulesInput.value = selectedIds.join(",");
+        }
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", updateTotalPrice);
+        });
+
+        document.getElementById("paymentForm").addEventListener("submit", function (event) {
+            if (selectedSchedulesInput.value === "") {
+                event.preventDefault();
+                alert("Vui lòng chọn ít nhất một lịch hẹn để thanh toán!");
+            }
+        });
+    });
+</script>

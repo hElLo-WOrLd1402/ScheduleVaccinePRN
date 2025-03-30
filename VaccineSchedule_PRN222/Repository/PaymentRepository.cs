@@ -9,16 +9,16 @@ namespace Repository
     {
         private readonly PaymentDAO _paymentDAO;
 
-        public PaymentRepository(VaccineScheduleDbContext context)
+        public PaymentRepository()
         {
-            _paymentDAO = new PaymentDAO(context);
+            _paymentDAO = new PaymentDAO();
         }
 
         public async Task<List<Payment>> GetAllAsync() =>
-            await _paymentDAO.GetAllAsync();
+            await _paymentDAO.GetAllPaymentAsync();
 
         public async Task<Payment?> GetByIdAsync(string id) =>
-            await _paymentDAO.GetByIdAsync(id);
+            await _paymentDAO.GetPaymentByIdAsync(id);
 
         public async Task AddAsync(Payment payment) =>
             await _paymentDAO.AddAsync(payment);
@@ -27,6 +27,8 @@ namespace Repository
             await _paymentDAO.UpdateAsync(payment);
 
         public async Task DeleteAsync(string id) =>
-            await _paymentDAO.DeleteAsync(id);
+            await _paymentDAO.DeletePaymentAsync(id);
+        public async Task<List<Payment>> GetPendingPaymentsAsync() =>
+            await _paymentDAO.GetPendingPaymentsAsync();
     }
 }
