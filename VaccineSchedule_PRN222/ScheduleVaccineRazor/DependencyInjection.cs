@@ -2,6 +2,7 @@
 using BussinessLogicLayer;
 using Service;
 using Repository;
+using DataAccessLayer.DAO;
 namespace ScheduleVaccineRazor
 {
     public static class DependencyInjection
@@ -18,6 +19,9 @@ namespace ScheduleVaccineRazor
             services.AddScoped<IChildrenProfileRepository, ChildrenProfileRepository>();
             services.AddScoped<IVaccineRepository, VaccineRepository>();
             services.AddScoped<IScheduleRepository, ScheduleRepository>();
+            //services.AddScoped<IFeedbackService, FeedbackService>();
+            //services.AddScoped<IFeedbackRepository, FeedbackRepository>();
+            //services.AddScoped<FeedbackDAO>();
             return services;
         }
     }

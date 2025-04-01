@@ -4,6 +4,33 @@
     ViewData["Title"] = "Home";
 }
 
-<h1>Welcome to Schedule Vaccine</h1>
-<a asp-page="/Accounts/Resgister" class="btn btn-primary">Resgister</a>
-<a asp-page="/Accounts/Login" class="btn btn-primary">Login</a>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4" style="width: 500px;">
+        <h2 class="text-center mb-3">Welcome to Schedule Vaccine</h2>
+
+        <div class="text-center mb-4">
+            <a asp-page="/Accounts/Register" class="btn btn-primary me-2">Register</a>
+            <a asp-page="/Accounts/Login" class="btn btn-success">Login</a>
+        </div>
+
+        <!-- Feedback Form -->
+        <h4 class="text-center mb-3">Send Your Feedback</h4>
+        <form method="post">
+            <div class="mb-3">
+                <label for="feedbackText" class="form-label">Your Feedback</label>
+                <textarea id="feedbackText" name="FeedbackText" class="form-control" rows="3" required></textarea>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-warning">Submit Feedback</button>
+            </div>
+        </form>
+@* 
+        @if (Model.FeedbackSent)
+        {
+            <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                Thank you for your feedback!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        } *@
+    </div>
+</div>

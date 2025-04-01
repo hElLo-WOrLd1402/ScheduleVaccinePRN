@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ScheduleVaccineRazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e53ff5a256c801e17814d8d12123ace261f2adc7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f78c0f4ab9ede161b17234feee8c377a894d73b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ScheduleVaccineRazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ScheduleVaccineRazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
