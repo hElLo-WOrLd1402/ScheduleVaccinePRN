@@ -19,9 +19,10 @@ namespace ScheduleVaccineRazor
             services.AddScoped<IChildrenProfileRepository, ChildrenProfileRepository>();
             services.AddScoped<IVaccineRepository, VaccineRepository>();
             services.AddScoped<IScheduleRepository, ScheduleRepository>();
-            //services.AddScoped<IFeedbackService, FeedbackService>();
-            //services.AddScoped<IFeedbackRepository, FeedbackRepository>();
-            //services.AddScoped<FeedbackDAO>();
+            services.AddScoped<IFeedbackService, FeedbackService>();
+            services.AddScoped<IFeedbackRepository, FeedbackRepository>();
+            // Đăng ký DAO
+            services.AddScoped<FeedbackDAO>();
             return services;
         }
     }
