@@ -1,4 +1,5 @@
 using ScheduleVaccineRazor;
+using Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddSignalR(); // Thêm SignalR
 builder.Services.AddApplicationServices();
-
+builder.Services.AddHostedService<ScheduleNotificationService>();
 
 
 builder.Services.AddSession(options =>
