@@ -16,18 +16,24 @@ namespace ScheduleVaccineRazor.Pages.Home
         private readonly IScheduleService _scheduleService;
         private readonly IChildrenProfileService _childrenProfileService;
         private readonly IVaccineService _vaccineService;
+        private readonly IPaymentService _paymentService; // Thêm PaymentService vào
 
-        public ScheduleIndexModel(IScheduleService scheduleService, IVaccineService vaccineService, IChildrenProfileService childrenProfileService)
+        public ScheduleIndexModel(
+            IScheduleService scheduleService,
+            IVaccineService vaccineService,
+            IChildrenProfileService childrenProfileService,
+            IPaymentService paymentService)  // Inject IPaymentService
         {
             _scheduleService = scheduleService;
             _childrenProfileService = childrenProfileService;
             _vaccineService = vaccineService;
+            _paymentService = paymentService;  // Gán PaymentService vào
         }
 
         public List<Schedule> Schedule { get; set; } = new();
         public List<ChildrenProfile> ChildrenProfiles { get; set; } = new(); // Danh sách hồ sơ trẻ
         public List<Vaccine> Vaccines { get; set; } = new(); // Danh sách vaccine
-
+        public List <Payment> Payments { get; set; } = new();
         [BindProperty]
         public CreateScheduleInput ScheduleInput { get; set; } = new();
 
@@ -52,8 +58,17 @@ namespace ScheduleVaccineRazor.Pages.Home
             // Lấy danh sách vaccine
             Vaccines = await _vaccineService.GetAllAsync();
 
+            // Lấy thông tin thanh toán từ PaymentService
+            foreach (var schedule in Schedule)
+            {
+                // Lấy tất cả các payment có PaymentStatus là "Pending"
+                var pendingPayments = await _paymentService.GetPendingPaymentsAsync();          
+            }
             return Page();
         }
+
+
+
 
         public async Task<IActionResult> OnPostAsync()
         {

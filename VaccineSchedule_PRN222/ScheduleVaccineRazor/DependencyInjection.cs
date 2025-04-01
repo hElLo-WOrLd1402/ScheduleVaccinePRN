@@ -21,6 +21,8 @@ namespace ScheduleVaccineRazor
             services.AddScoped<IScheduleRepository, ScheduleRepository>();
             services.AddScoped<IFeedbackService, FeedbackService>();
             services.AddScoped<IFeedbackRepository, FeedbackRepository>();
+            services.AddScoped<IVnPayService, VnPayService>();
+
             // Đăng ký DAO
             services.AddScoped<FeedbackDAO>();
             return services;

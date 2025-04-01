@@ -54,6 +54,7 @@
             <th>Trạng thái</th>
             <th>Trẻ</th>
             <th>Vaccine</th>
+            <th>Trạng thái thanh toán</th>
         </tr>
     </thead>
     <tbody id="scheduleTable">
@@ -66,6 +67,26 @@
                     <td>@item.Status</td>
                     <td>@item.Child.FullName</td>
                     <td>@item.Vaccine.Name</td>
+                    <td>
+                        @if (item.Payments != null && item.Payments.Any())
+                        {
+                            // Check if any payment is Pending
+                            var paymentStatus = item.Payments.FirstOrDefault(p => p.PaymentStatus == "Pending")?.PaymentStatus;
+
+                            if (paymentStatus == "Pending")
+                            {
+                                <text>Chưa thanh toán</text>  <!-- Display 'Chưa thanh toán' if Pending -->
+                            }
+                            else
+                            {
+                                <text>Đã thanh toán</text>  <!-- Display 'Đã thanh toán' if not Pending -->
+                            }
+                        }
+                        else
+                        {
+                            <text>Chưa thanh toán</text>  <!-- Display 'Chưa thanh toán' if no payment exists -->
+                        }
+                    </td> <!-- Hiển thị PaymentStatus -->
                 </tr>
             }
         }

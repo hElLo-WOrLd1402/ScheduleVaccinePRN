@@ -14,35 +14,92 @@ namespace ScheduleVaccineRazor.Pages.Home
         private readonly IScheduleService _scheduleService;
         private readonly IVaccineService _vaccineService;
         private readonly IPaymentService _paymentService;
+        private readonly IVnPayService _vnPayService;
 
-        public SchedulePaymentModel(IScheduleService scheduleService, IVaccineService vaccineService, IPaymentService paymentService)
+        public SchedulePaymentModel(IScheduleService scheduleService, IVaccineService vaccineService, IPaymentService paymentService, IVnPayService vnPayService)
         {
             _scheduleService = scheduleService;
             _vaccineService = vaccineService;
             _paymentService = paymentService;
+            _vnPayService = vnPayService;
         }
 
         [BindProperty]
         public List<Schedule> Schedules { get; set; }
         public decimal TotalAmount { get; set; }
-
         public async Task<IActionResult> OnGetAsync()
         {
-            var payments = await _paymentService.GetPendingPaymentsAsync();
-            Schedules = await _scheduleService.GetAllSchedulesAsync(); // Sửa lỗi await
+            // Lấy danh sách tất cả các lịch hẹn
+            var schedules = await _scheduleService.GetAllSchedulesAsync();
 
-            // Kiểm tra nếu danh sách null
-            if (Schedules == null)
+            // Lọc ra các lịch hẹn có payment status là "Pending"
+            var filteredSchedules = new List<Schedule>();
+
+            foreach (var schedule in schedules)
             {
-                Schedules = new List<Schedule>();
+                // Lấy payment liên quan đến lịch hẹn này
+                var payment = await _paymentService.GetPendingPaymentsAsync();
+
+                // Kiểm tra nếu có payment và payment status là "Pending"
+                if (payment != null && payment.Any(p => p.ScheduleId == schedule.Id && p.PaymentStatus == "Pending"))
+                {
+                    filteredSchedules.Add(schedule);
+                }
             }
 
+            // Cập nhật danh sách schedules cho view
+            Schedules = filteredSchedules;
+
+            if (Schedules == null || !Schedules.Any())
+            {
+                TempData["ErrorMessage"] = "Không có lịch hẹn nào có trạng thái thanh toán 'Chưa thanh toán'.";
+            }
+
+            // Tính tổng tiền cho các lịch hẹn đã chọn
             TotalAmount = Schedules
-                         .Where(s => s != null && s.Vaccine != null) // Tránh NullReferenceException
-                         .Sum(s => s.Vaccine.Price);
+                          .Where(s => s.Vaccine != null)  // Tránh NullReferenceException
+                          .Sum(s => s.Vaccine.Price);
 
             return Page();
         }
+
+        //public async Task<IActionResult> OnPostAsync(List<string> selectedSchedules)
+        //{
+        //    if (selectedSchedules == null || !selectedSchedules.Any())
+        //    {
+        //        TempData["ErrorMessage"] = "Vui lòng chọn ít nhất một lịch hẹn để thanh toán.";
+        //        return Page();
+        //    }
+
+        //    // Lấy tất cả các thanh toán có trạng thái "Pending"
+        //    var pendingPayments = await _paymentService.GetPendingPaymentsAsync();
+
+        //    // Lọc các thanh toán có lịch hẹn đã chọn
+        //    var selectedPayments = pendingPayments.Where(payment => selectedSchedules.Contains(payment.ScheduleId)).ToList();
+
+        //    if (!selectedPayments.Any())
+        //    {
+        //        TempData["ErrorMessage"] = "Không có thanh toán nào được chọn hoặc không có thanh toán nào có trạng thái 'Pending'.";
+        //        return Page();
+        //    }
+
+        //    // Tính tổng tiền của các lịch hẹn đã chọn
+        //    decimal totalAmount = selectedPayments.Sum(payment => payment.Amount);
+
+        //    // Tạo mô hình thanh toán cho VNPay
+        //    var paymentInfo = new PaymentInformationModel
+        //    {
+        //        Amount = totalAmount,
+        //        OrderDescription = "Thanh toán lịch hẹn",
+        //        OrderType = "billpayment"
+        //    };
+
+        //    // Gọi dịch vụ VNPay để tạo URL thanh toán
+        //    string paymentUrl = _vnPayService.CreatePaymentUrl(paymentInfo, HttpContext);
+
+        //    // Chuyển hướng người dùng đến VNPay sandbox để thanh toán
+        //    return Redirect(paymentUrl);
+        //}
 
 
         public async Task<IActionResult> OnPostAsync(List<string> selectedSchedules)
@@ -53,21 +110,31 @@ namespace ScheduleVaccineRazor.Pages.Home
                 return Page();
             }
 
-            foreach (var scheduleId in selectedSchedules)
-            {
-                // Lấy Payment liên quan đến lịch hẹn
-                var payment = await _paymentService.GetPaymentByIdAsync(scheduleId);
+            // Lấy tất cả các thanh toán có trạng thái "Pending"
+            var pendingPayments = await _paymentService.GetPendingPaymentsAsync();
 
-                if (payment != null)
-                {
-                    payment.PaymentStatus = "Paid"; // Chỉ cập nhật status của Payment
-                    await _paymentService.UpdatePaymentAsync(payment);
-                }
+            // Lọc các thanh toán có lịch hẹn đã chọn
+            var selectedPayments = pendingPayments.Where(payment => selectedSchedules.Contains(payment.Schedule.Id)).ToList();
+
+            if (!selectedPayments.Any())
+            {
+                TempData["ErrorMessage"] = "Không có thanh toán nào được chọn hoặc không có thanh toán nào có trạng thái 'Pending'.";
+                return Page();
+            }
+
+            // Cập nhật trạng thái thanh toán của các thanh toán đã chọn
+            foreach (var payment in selectedPayments)
+            {
+                payment.PaymentStatus = "Paid"; // Cập nhật trạng thái thanh toán thành "Paid"
+                await _paymentService.UpdatePaymentAsync(payment); // Lưu thay đổi
             }
 
             TempData["SuccessMessage"] = "Thanh toán thành công!";
             return RedirectToPage("ScheduleIndex");
         }
+
+
+
 
     }
 }
