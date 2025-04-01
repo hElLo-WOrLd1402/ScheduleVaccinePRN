@@ -9,9 +9,9 @@ namespace DataAccessLayer.DAO
     {
         private readonly VaccineScheduleDbContext _context;
 
-        public FeedbackDAO(VaccineScheduleDbContext context)
+        public FeedbackDAO()
         {
-            _context = context;
+            _context = new VaccineScheduleDbContext();
         }
 
         public async Task<List<Feedback>> GetAllAsync()

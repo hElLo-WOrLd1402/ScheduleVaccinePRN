@@ -3,6 +3,7 @@
 @{
     var errorMessage = TempData["ErrorMessage"] as string;
 }
+
 <!-- Bootstrap Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -10,14 +11,45 @@
 
         <div class="d-flex">
             <a asp-page="/Home/ScheduleIndex" class="btn btn-secondary">Schedule</a>
-            <a asp-page="/Home/Profile" class="btn btn-secondary">Profile</a>
+            <a asp-page="/Home/Profile" class="btn btn-secondary">Manage Profile</a>
             <a asp-page="/Home/ChildrenProfile" class="btn btn-secondary">Your Children</a>
         </div>
     </div>
 </nav>
+
 @if (!string.IsNullOrEmpty(errorMessage))
 {
-    <div >
-        @errorMessage
-    </div>
+    <div class="alert alert-danger">@errorMessage</div>
 }
+
+<!-- Danh sách Feedback -->
+<div class="container mt-4">
+    <h3>User Feedbacks</h3>
+    <ul class="list-group">
+        @foreach (var feedback in Model.Feedbacks)
+        {
+            <li class="list-group-item">
+                <strong>@feedback.UserId:</strong>
+                <span class="text-warning">⭐ @feedback.Rating/5</span>
+                <p>@feedback.Comments</p>
+                <span class="text-muted float-end">@feedback.CreatedTime?.ToString("dd/MM/yyyy HH:mm")</span>
+            </li>
+        }
+    </ul>
+
+    <!-- Form gửi Feedback -->
+    <h4 class="mt-4">Leave Your Feedback</h4>
+    <form method="post">
+        <div class="mb-3">
+            <label for="rating" class="form-label">Rating (1-5)</label>
+            <input type="number" id="rating" name="Rating" class="form-control" min="1" max="5" value="5" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="comments" class="form-label">Comments</label>
+            <textarea id="comments" name="Comments" class="form-control"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+    </form>
+</div>
