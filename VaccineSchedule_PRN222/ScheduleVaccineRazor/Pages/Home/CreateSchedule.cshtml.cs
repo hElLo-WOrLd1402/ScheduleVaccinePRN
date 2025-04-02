@@ -9,6 +9,7 @@ using BussinessLogicLayer;
 using Service;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.SignalR;
+using static ScheduleVaccineRazor.Pages.Home.ScheduleIndexModel;
 
 namespace ScheduleVaccineRazor.Pages.Home
 {

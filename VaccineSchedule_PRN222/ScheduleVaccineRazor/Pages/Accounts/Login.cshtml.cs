@@ -47,7 +47,7 @@ namespace ScheduleVaccineRazor.Pages.Accounts
                 {
                     HttpContext.Session.SetString("Username", user.Username);
                     HttpContext.Session.SetString("RoleId", user.Role.ToString());
-                    HttpContext.Session.SetString("ParentId", user.Id); // Giả sử user.Id là ParentId
+                    HttpContext.Session.SetString("ParentId", user.Id); // Giả sử user.Id là ParentId                  
                     return RedirectToPage("/Home/Menu");
                 }
                 else

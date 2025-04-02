@@ -1,18 +1,55 @@
 ﻿@page
 @model ScheduleVaccineRazor.Pages.Home.MenuModel
 @{
-    var errorMessage = TempData["ErrorMessage"] as string;
 }
-
+<<<<<<< Updated upstream
 <!-- Bootstrap Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" asp-page="/Home/Index">Schedule Vaccine</a>
+=======
 
+<!-- Medical-themed Header Banner -->
+<div class="container-fluid p-0">
+    <div class="position-relative">
+        <img src="~/img/vaccine.jpg" alt="Vaccination Service" class="w-100" style="max-height: 300px; object-fit: cover;" onerror="this.src='https://cdn.pixabay.com/photo/2020/12/20/08/34/vaccination-5846574_1280.jpg'">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background-color: rgba(13, 110, 253, 0.3);">
+            <div class="container">
+                <div class="row justify-content-start">
+                    <div class="col-12 col-lg-8">
+                        <h1 class="display-4 text-white animated slideInDown mb-4">Your Health Is Our Priority</h1>
+                        <p class="fs-5 fw-medium text-white mb-4 pb-2">We provide quality vaccination services to protect you and your loved ones</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+>>>>>>> Stashed changes
+
+<!-- Bootstrap Navbar with Medical Styling -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand" asp-page="/Home/Index">
+            <i class="fas fa-syringe me-2"></i>Schedule Vaccine
+        </a>
         <div class="d-flex">
-            <a asp-page="/Home/ScheduleIndex" class="btn btn-secondary">Schedule</a>
-            <a asp-page="/Home/Profile" class="btn btn-secondary">Manage Profile</a>
+<<<<<<< Updated upstream
+            <a asp-page="/Home/Profile" class="btn btn-secondary">Profile</a>
             <a asp-page="/Home/ChildrenProfile" class="btn btn-secondary">Your Children</a>
+        </div>
+    </div>
+</nav>
+=======
+            <a asp-page="/Home/ScheduleIndex" class="btn me-2" style="background-color: #4682B4; color: white; border-radius: 20px;">
+                <i class="far fa-calendar-alt me-1"></i> Schedule
+            </a>
+            <a asp-page="/Home/Profile" class="btn me-2" style="background-color: #5cb85c; color: white; border-radius: 20px;">
+                <i class="far fa-user-circle me-1"></i> Manage Profile
+            </a>
+            <a asp-page="/Home/ChildrenProfile" class="btn" style="background-color: #f0ad4e; color: white; border-radius: 20px;">
+                <i class="fas fa-child me-1"></i> Your Children
+            </a>
         </div>
     </div>
 </nav>
@@ -22,34 +59,190 @@
     <div class="alert alert-danger">@errorMessage</div>
 }
 
-<!-- Danh sách Feedback -->
+<!-- Medical Information Cards -->
 <div class="container mt-4">
-    <h3>User Feedbacks</h3>
-    <ul class="list-group">
-        @foreach (var feedback in Model.Feedbacks)
-        {
-            <li class="list-group-item">
-                <strong>@feedback.UserId:</strong>
-                <span class="text-warning">⭐ @feedback.Rating/5</span>
-                <p>@feedback.Comments</p>
-                <span class="text-muted float-end">@feedback.CreatedTime?.ToString("dd/MM/yyyy HH:mm")</span>
-            </li>
-        }
-    </ul>
-
-    <!-- Form gửi Feedback -->
-    <h4 class="mt-4">Leave Your Feedback</h4>
-    <form method="post">
-        <div class="mb-3">
-            <label for="rating" class="form-label">Rating (1-5)</label>
-            <input type="number" id="rating" name="Rating" class="form-control" min="1" max="5" value="5" required>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-primary">
+                <img src="~/img/vaccineinfo.jpg" class="card-img-top" alt="Vaccine Information" style="height: 200px; object-fit: cover;" onerror="this.src='https://cdn.pixabay.com/photo/2021/01/12/08/39/covid-19-5911366_1280.jpg'">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Why Vaccinate?</h5>
+                    <p class="card-text">Vaccines help your immune system fight infections faster and more effectively. When you get a vaccine, it sparks your immune response, helping your body fight off and remember the germ so it can attack it if the germ ever invades again.</p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    <a href="#" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
         </div>
-
-        <div class="mb-3">
-            <label for="comments" class="form-label">Comments</label>
-            <textarea id="comments" name="Comments" class="form-control"></textarea>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-success">
+                <img src="~/img/Childvaccine.jpg" class="card-img-top" alt="Child Vaccination" style="height: 200px; object-fit: cover;" onerror="this.src='https://cdn.pixabay.com/photo/2021/03/14/11/14/woman-6093772_1280.jpg'">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Children's Vaccines</h5>
+                    <p class="card-text">Children need vaccines to protect them from dangerous childhood diseases. These diseases can have serious complications and can even kill. Immunizing your children helps keep them and our community healthy.</p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    <a href="#" class="btn btn-outline-success">See Schedule</a>
+                </div>
+            </div>
         </div>
-
-        <button type="submit" class="btn btn-primary">Submit Feedback</button>
-    </form>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-info">
+                <img src="~/img/Doctorvaccine.jpg" class="card-img-top" alt="Professional Care" style="height: 200px; object-fit: cover;" onerror="this.src='https://cdn.pixabay.com/photo/2020/11/03/15/32/doctor-5759806_1280.jpg'">
+                <div class="card-body">
+                    <h5 class="card-title text-info">Our Medical Team</h5>
+                    <p class="card-text">Our dedicated team of healthcare professionals ensures that all vaccination procedures meet the highest medical standards. We provide personalized care and support throughout your vaccination journey.</p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    <a href="#" class="btn btn-outline-info">Meet Our Team</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Vaccination Stats -->
+<div class="container my-5">
+    <div class="p-4 bg-light rounded shadow-sm">
+        <h3 class="border-bottom pb-2 mb-4"><i class="fas fa-chart-bar me-2"></i>Vaccination Statistics</h3>
+        <div class="row text-center">
+            <div class="col-sm-6 col-md-3 mb-3">
+                <div class="p-3 bg-white rounded shadow-sm">
+                    <h1 class="display-4 text-primary">95%</h1>
+                    <p class="text-muted">Vaccination Rate</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 mb-3">
+                <div class="p-3 bg-white rounded shadow-sm">
+                    <h1 class="display-4 text-success">5,000+</h1>
+                    <p class="text-muted">Vaccines Administered</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 mb-3">
+                <div class="p-3 bg-white rounded shadow-sm">
+                    <h1 class="display-4 text-warning">12</h1>
+                    <p class="text-muted">Types of Vaccines</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 mb-3">
+                <div class="p-3 bg-white rounded shadow-sm">
+                    <h1 class="display-4 text-info">24/7</h1>
+                    <p class="text-muted">Medical Support</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Feedback List with Medical Styling -->
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header" style="background-color: #e3f2fd;">
+            <h3 class="mb-0"><i class="far fa-comments me-2"></i>User Feedbacks</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                @foreach (var feedback in Model.Feedbacks)
+                {
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-between">
+                            <strong>@feedback.UserId</strong>
+                            <span class="text-warning">⭐ @feedback.Rating/5</span>
+                        </div>
+                        <p>@feedback.Comments</p>
+                        <span class="text-muted float-end">@feedback.CreatedTime?.ToString("dd/MM/yyyy HH:mm")</span>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <!-- Feedback Form with Medical Styling -->
+    <div class="card mt-4 shadow-sm mb-5">
+        <div class="card-header" style="background-color: #e3f2fd;">
+            <h4 class="mb-0"><i class="far fa-edit me-2"></i>Leave Your Feedback</h4>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div class="mb-3">
+                    <label for="rating" class="form-label">Rating (1-5)</label>
+                    <div class="rating-stars mb-2">
+                        <i class="fas fa-star fa-2x text-warning me-1" id="star1" onclick="setRating(1)"></i>
+                        <i class="fas fa-star fa-2x text-warning me-1" id="star2" onclick="setRating(2)"></i>
+                        <i class="fas fa-star fa-2x text-warning me-1" id="star3" onclick="setRating(3)"></i>
+                        <i class="fas fa-star fa-2x text-warning me-1" id="star4" onclick="setRating(4)"></i>
+                        <i class="fas fa-star fa-2x text-warning" id="star5" onclick="setRating(5)"></i>
+                    </div>
+                    <input type="hidden" id="rating" name="Rating" value="5" required>
+                </div>
+                <div class="mb-3">
+                    <label for="comments" class="form-label">Comments</label>
+                    <textarea id="comments" name="Comments" class="form-control" rows="4" placeholder="Share your experience with our vaccination service..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-lg" style="background-color: #4682B4; color: white; border-radius: 20px;">
+                    <i class="fas fa-paper-plane me-2"></i>Submit Feedback
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Footer with Medical Info -->
+<footer class="bg-dark text-white mt-5 py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Schedule Vaccine Center</h5>
+                <p>
+                    <i class="fas fa-map-marker-alt me-2"></i>123 Medical Avenue<br>
+                    <i class="fas fa-phone me-2"></i>(123) 456-7890<br>
+                    <i class="fas fa-envelope me-2"></i>info@vaccinecenter.com
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h5>Working Hours</h5>
+                <p>
+                    Monday - Friday: 8:00 AM - 8:00 PM<br>
+                    Saturday: 9:00 AM - 5:00 PM<br>
+                    Sunday: Emergency Only
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h5>Emergency Contact</h5>
+                <p><i class="fas fa-phone-alt me-2"></i>Emergency: (123) 999-8888</p>
+                <p><small>Available 24/7 for urgent vaccination needs</small></p>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p class="mb-0">&copy; 2025 Schedule Vaccine Center. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- JavaScript for Rating Stars -->
+<script>
+    function setRating(rating) {
+        document.getElementById('rating').value = rating;
+
+        // Reset all stars
+        for (let i = 1; i <= 5; i++) {
+            document.getElementById('star' + i).classList.remove('text-warning');
+            document.getElementById('star' + i).classList.add('text-muted');
+        }
+
+        // Set selected stars
+        for (let i = 1; i <= rating; i++) {
+            document.getElementById('star' + i).classList.remove('text-muted');
+            document.getElementById('star' + i).classList.add('text-warning');
+        }
+    }
+
+    // Initialize all stars as selected (default rating 5)
+    window.onload = function() {
+        setRating(5);
+    }
+</script>
+>>>>>>> Stashed changes
