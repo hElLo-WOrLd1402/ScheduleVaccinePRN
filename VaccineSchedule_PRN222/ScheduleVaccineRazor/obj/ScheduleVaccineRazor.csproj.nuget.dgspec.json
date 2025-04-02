@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj": {}
+    "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj": {}
   },
   "projects": {
-    "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+    "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
+        "projectUniqueName": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
         "projectName": "BussinessLogicLayer",
-        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
-        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
-        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\obj\\",
+        "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\BussinessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,20 +87,20 @@
         }
       }
     },
-    "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
-        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -110,15 +109,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
-                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
+              "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+                "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
               }
             }
           }
@@ -166,6 +164,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -188,20 +190,20 @@
         }
       }
     },
-    "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
+    "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
-        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\obj\\",
+        "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -210,18 +212,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
-                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
+              "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+                "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
               },
-              "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -261,20 +262,20 @@
         }
       }
     },
-    "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj": {
+    "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj",
+        "projectUniqueName": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj",
         "projectName": "ScheduleVaccineRazor",
-        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj",
-        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
-        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\obj\\",
+        "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -283,18 +284,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
-                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
+              "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+                "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
               },
-              "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj": {
-                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj"
+              "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\Service\\Service.csproj": {
+                "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\Service\\Service.csproj"
               }
             }
           }
@@ -349,20 +349,20 @@
         }
       }
     },
-    "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj": {
+    "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
-        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\obj\\",
+        "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -371,21 +371,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
-                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
+              "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+                "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
               },
-              "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
-                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj"
+              "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Study\\2025Spring\\PRN222\\vaccine\\VaccineSchedule_PRN222\\Repository\\Repository.csproj"
               }
             }
           }

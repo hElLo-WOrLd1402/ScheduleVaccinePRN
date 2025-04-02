@@ -18,7 +18,7 @@ namespace DataAccessLayer.DAO
         // Lấy tất cả lịch hẹn
         public async Task<List<Schedule>> GetAllAsync()
         {
-            return await _context.Schedules.Include(s => s.Child)
+            return await _context.Schedules.Include(s => s.Child).Include(s => s.Child.Parent)
                                            .Include(s => s.Vaccine)
                                            .Include(s => s.Feedbacks)
                                            .Include(s => s.Payments)
