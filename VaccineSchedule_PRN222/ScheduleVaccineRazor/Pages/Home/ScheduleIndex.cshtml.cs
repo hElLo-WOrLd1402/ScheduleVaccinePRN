@@ -33,13 +33,19 @@ namespace ScheduleVaccineRazor.Pages.Home
         public List<Schedule> Schedule { get; set; } = new();
         public List<ChildrenProfile> ChildrenProfiles { get; set; } = new(); // Danh sách hồ sơ trẻ
         public List<Vaccine> Vaccines { get; set; } = new(); // Danh sách vaccine
-        public List <Payment> Payments { get; set; } = new();
+        public List<Payment> Payments { get; set; } = new();
         [BindProperty]
         public CreateScheduleInput ScheduleInput { get; set; } = new();
 
         public async Task<IActionResult> OnGetAsync()
         {
             string parentId = HttpContext.Session.GetString("ParentId");
+            if (string.IsNullOrEmpty(parentId))
+            {
+                TempData["ErrorMessage"] = "ParentId is not available in the session.";
+                return RedirectToPage("/Home/Menu");
+            }
+
 
             // Lấy danh sách hồ sơ trẻ của phụ huynh hiện tại
             ChildrenProfiles = await _childrenProfileService.GetAllChildrenProfilesAsync();
@@ -62,7 +68,7 @@ namespace ScheduleVaccineRazor.Pages.Home
             foreach (var schedule in Schedule)
             {
                 // Lấy tất cả các payment có PaymentStatus là "Pending"
-                var pendingPayments = await _paymentService.GetPendingPaymentsAsync();          
+                var pendingPayments = await _paymentService.GetPendingPaymentsAsync();
             }
             return Page();
         }

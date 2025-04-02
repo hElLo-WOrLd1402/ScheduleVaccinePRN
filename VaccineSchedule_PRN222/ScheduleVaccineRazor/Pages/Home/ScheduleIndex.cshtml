@@ -5,6 +5,100 @@
     ViewData["Title"] = "Lịch hẹn tiêm vaccine";
 }
 
+<!-- Link to medical theme styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f9fb;
+        color: #4e4e4e;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: #007bff;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        font-weight: 600;
+        color: #007bff;
+    }
+
+    .form-control {
+        border-radius: 0.5rem;
+        border: 1px solid #ccc;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+    .btn {
+        border-radius: 0.5rem;
+        padding: 0.75rem 1.25rem;
+        font-size: 1.1rem;
+        background-color: #28a745;
+        color: white;
+        border: none;
+    }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+    .btn-primary {
+        background-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 2rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+
+    th, td {
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    th {
+        background-color: #f0f8ff;
+        color: #007bff;
+    }
+
+    tr:hover {
+        background-color: #f7f9fc;
+    }
+
+    .table-actions a {
+        text-decoration: none;
+    }
+
+    .text-center {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .form-group mt-4 input[type="text"] {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 1rem;
+    }
+</style>
+
 <h1>Lịch hẹn tiêm vaccine</h1>
 
 <!-- Form tạo lịch hẹn -->
@@ -37,7 +131,7 @@
             }
         </select>
     </div>
-    <button type="submit" class="btn btn-success mt-2">Đặt lịch</button>
+    <button type="submit" class="btn mt-2">Đặt lịch</button>
 </form>
 
 <!-- Ô nhập để lọc lịch theo ngày -->
@@ -75,18 +169,18 @@
 
                             if (paymentStatus == "Pending")
                             {
-                                <text>Chưa thanh toán</text>  <!-- Display 'Chưa thanh toán' if Pending -->
+                                <text>Chưa thanh toán</text>
                             }
                             else
                             {
-                                <text>Đã thanh toán</text>  <!-- Display 'Đã thanh toán' if not Pending -->
+                                <text>Đã thanh toán</text>
                             }
                         }
                         else
                         {
-                            <text>Chưa thanh toán</text>  <!-- Display 'Chưa thanh toán' if no payment exists -->
+                            <text>Chưa thanh toán</text>
                         }
-                    </td> <!-- Hiển thị PaymentStatus -->
+                    </td>
                 </tr>
             }
         }
@@ -101,8 +195,7 @@
     </div>
 }
 
-<!-- Thêm Flatpickr -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<a asp-page="/Home/Menu" class="btn btn-secondary mt-3">Back</a>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
