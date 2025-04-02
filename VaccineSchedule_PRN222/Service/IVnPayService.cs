@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BussinessLogicLayer;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,8 @@ namespace Service
 {
     public interface IVnPayService
     {
-        string CreatePaymentUrl(PaymentInformationModel model, HttpContext context);
-        PaymentResponseModel PaymentExecute(IQueryCollection collections);
+        string CreatePaymentUrl(Payment payment, HttpContext context);
+        Task<Payment> ProcessPaymentResponseAsync(IQueryCollection query);
     }
+
 }

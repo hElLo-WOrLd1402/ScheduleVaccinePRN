@@ -62,7 +62,6 @@ namespace ScheduleVaccineRazor.Pages.Home
 
             return Page();
         }
-
         //public async Task<IActionResult> OnPostAsync(List<string> selectedSchedules)
         //{
         //    if (selectedSchedules == null || !selectedSchedules.Any())
@@ -71,11 +70,11 @@ namespace ScheduleVaccineRazor.Pages.Home
         //        return Page();
         //    }
 
-        //    // Lấy tất cả các thanh toán có trạng thái "Pending"
+        //    // Lấy danh sách thanh toán có trạng thái "Pending" và liên quan đến các lịch hẹn đã chọn
         //    var pendingPayments = await _paymentService.GetPendingPaymentsAsync();
-
-        //    // Lọc các thanh toán có lịch hẹn đã chọn
-        //    var selectedPayments = pendingPayments.Where(payment => selectedSchedules.Contains(payment.ScheduleId)).ToList();
+        //    var selectedPayments = pendingPayments
+        //        .Where(payment => selectedSchedules.Contains(payment.ScheduleId))
+        //        .ToList();
 
         //    if (!selectedPayments.Any())
         //    {
@@ -83,23 +82,14 @@ namespace ScheduleVaccineRazor.Pages.Home
         //        return Page();
         //    }
 
-        //    // Tính tổng tiền của các lịch hẹn đã chọn
         //    decimal totalAmount = selectedPayments.Sum(payment => payment.Amount);
 
-        //    // Tạo mô hình thanh toán cho VNPay
-        //    var paymentInfo = new PaymentInformationModel
-        //    {
-        //        Amount = totalAmount,
-        //        OrderDescription = "Thanh toán lịch hẹn",
-        //        OrderType = "billpayment"
-        //    };
+        //    // Tạo URL thanh toán sử dụng chính model Payment thay vì PaymentInformationModel
+        //    string paymentUrl = _vnPayService.CreatePaymentUrl(selectedPayments.First(), HttpContext);
 
-        //    // Gọi dịch vụ VNPay để tạo URL thanh toán
-        //    string paymentUrl = _vnPayService.CreatePaymentUrl(paymentInfo, HttpContext);
-
-        //    // Chuyển hướng người dùng đến VNPay sandbox để thanh toán
         //    return Redirect(paymentUrl);
         //}
+
 
 
         public async Task<IActionResult> OnPostAsync(List<string> selectedSchedules)

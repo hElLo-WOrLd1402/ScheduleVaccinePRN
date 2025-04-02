@@ -19,3 +19,5 @@ public partial class Payment
 
     public virtual Schedule Schedule { get; set; } = null!;
 }
+
+
