@@ -12,8 +12,6 @@ namespace ScheduleVaccineRazor
         {
             // Đăng ký các dịch vụ
             services.AddScoped<IAccountService, AccountService>();
-            services.AddScoped<IScheduleService, ScheduleService>();
-
             services.AddSingleton<IScheduleService, ScheduleService>();
             services.AddScoped<IChildrenProfileService, ChildrenProfileService>();
             services.AddScoped<IVaccineService, VaccineService>();
