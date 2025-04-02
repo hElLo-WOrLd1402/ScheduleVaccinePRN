@@ -28,12 +28,15 @@ namespace DataAccessLayer.DAO
         // Lấy lịch hẹn theo ID
         public async Task<Schedule?> GetByIdAsync(string id)
         {
-            return await _context.Schedules.Include(s => s.Child)
-                                           .Include(s => s.Vaccine)
-                                           .Include(s => s.Feedbacks)
-                                           .Include(s => s.Payments)
-                                           .FirstOrDefaultAsync(s => s.Id == id);
+            return await _context.Schedules
+                .AsNoTracking()  // Prevent tracking issues
+                .Include(s => s.Child)
+                .Include(s => s.Vaccine)
+                .Include(s => s.Feedbacks)
+                .Include(s => s.Payments)
+                .FirstOrDefaultAsync(s => s.Id == id);
         }
+
 
         // Thêm lịch hẹn mới
         public async Task AddAsync(Schedule schedule)
@@ -45,9 +48,14 @@ namespace DataAccessLayer.DAO
         // Cập nhật thông tin lịch hẹn
         public async Task UpdateAsync(Schedule schedule)
         {
-            _context.Schedules.Update(schedule);
+            var existingSchedule = await _context.Schedules.FindAsync(schedule.Id);
+            if (existingSchedule != null)
+            {
+                _context.Entry(existingSchedule).CurrentValues.SetValues(schedule); // Cập nhật từng giá trị
+            }
             await _context.SaveChangesAsync();
         }
+
 
         // Xóa lịch hẹn theo ID
         public async Task DeleteAsync(string id)
