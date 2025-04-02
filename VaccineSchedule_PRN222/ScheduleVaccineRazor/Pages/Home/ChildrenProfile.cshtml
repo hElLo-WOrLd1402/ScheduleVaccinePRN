@@ -29,7 +29,6 @@
     <button type="submit" asp-page-handler="Add" class="btn btn-primary mt-2">Add Profile</button>
 </form>
 
-
 <hr />
 
 <!-- Danh sách hồ sơ trẻ em -->
@@ -51,12 +50,15 @@
                 <td>@profile.BirthDate.ToString("yyyy-MM-dd")</td>
                 <td>@profile.Gender</td>
                 <td>@profile.ParentId</td>
+<<<<<<< Updated upstream
                 <td>
                     <form method="post">
                         <input type="hidden" name="id" value="@profile.Id" />
                         <button type="submit" asp-page-handler="Delete" class="btn btn-danger btn-sm">Delete</button>
                     </form>
                 </td>
+=======
+>>>>>>> Stashed changes
                 <td>
                     <form method="post">
                         <input type="hidden" name="id" value="@profile.Id" />
@@ -68,3 +70,6 @@
         }
     </tbody>
 </table>
+
+<!-- Back Button -->
+<a asp-page="/Home/Menu" class="btn btn-secondary mt-3">Back</a>

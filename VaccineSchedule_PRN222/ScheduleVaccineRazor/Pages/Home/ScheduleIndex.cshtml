@@ -1,0 +1,214 @@
+﻿@page
+@model ScheduleVaccineRazor.Pages.Home.ScheduleIndexModel
+
+@{
+    ViewData["Title"] = "Lịch hẹn tiêm vaccine";
+}
+
+<!-- Link to medical theme styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f9fb;
+        color: #4e4e4e;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: #007bff;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        font-weight: 600;
+        color: #007bff;
+    }
+
+    .form-control {
+        border-radius: 0.5rem;
+        border: 1px solid #ccc;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+    .btn {
+        border-radius: 0.5rem;
+        padding: 0.75rem 1.25rem;
+        font-size: 1.1rem;
+        background-color: #28a745;
+        color: white;
+        border: none;
+    }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+    .btn-primary {
+        background-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 2rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+
+    th, td {
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    th {
+        background-color: #f0f8ff;
+        color: #007bff;
+    }
+
+    tr:hover {
+        background-color: #f7f9fc;
+    }
+
+    .table-actions a {
+        text-decoration: none;
+    }
+
+    .text-center {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .form-group mt-4 input[type="text"] {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 1rem;
+    }
+</style>
+
+<h1>Lịch hẹn tiêm vaccine</h1>
+
+<!-- Form tạo lịch hẹn -->
+<form method="post">
+    <div class="form-group">
+        <label for="appointmentDate">Chọn ngày hẹn:</label>
+        <input type="text" id="appointmentDate" name="AppointmentDate" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="childId">Chọn trẻ:</label>
+        <select id="childId" name="ChildId" class="form-control" required>
+            @if (Model.ChildrenProfiles != null)
+            {
+                @foreach (var child in Model.ChildrenProfiles)
+                {
+                    <option value="@child.Id">@child.FullName</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="vaccineId">Chọn vaccine:</label>
+        <select id="vaccineId" name="VaccineId" class="form-control" required>
+            @if (Model.Vaccines != null)
+            {
+                @foreach (var vaccine in Model.Vaccines)
+                {
+                    <option value="@vaccine.Id">@vaccine.Name</option>
+                }
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn mt-2">Đặt lịch</button>
+</form>
+
+<!-- Ô nhập để lọc lịch theo ngày -->
+<div class="form-group mt-4">
+    <label for="datepicker">Lọc lịch theo ngày:</label>
+    <input type="text" id="datepicker" class="form-control" placeholder="Chọn ngày" />
+</div>
+
+<!-- Bảng danh sách lịch hẹn -->
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Ngày hẹn</th>
+            <th>Trạng thái</th>
+            <th>Trẻ</th>
+            <th>Vaccine</th>
+            <th>Trạng thái thanh toán</th>
+        </tr>
+    </thead>
+    <tbody id="scheduleTable">
+        @if (Model.Schedule != null)
+        {
+            @foreach (var item in Model.Schedule)
+            {
+                <tr data-date="@item.AppointmentDate.ToString("yyyy-MM-dd")">
+                    <td>@item.AppointmentDate.ToString("yyyy-MM-dd")</td>
+                    <td>@item.Status</td>
+                    <td>@item.Child.FullName</td>
+                    <td>@item.Vaccine.Name</td>
+                    <td>
+                        @if (item.Payments != null && item.Payments.Any())
+                        {
+                            // Check if any payment is Pending
+                            var paymentStatus = item.Payments.FirstOrDefault(p => p.PaymentStatus == "Pending")?.PaymentStatus;
+
+                            if (paymentStatus == "Pending")
+                            {
+                                <text>Chưa thanh toán</text>
+                            }
+                            else
+                            {
+                                <text>Đã thanh toán</text>
+                            }
+                        }
+                        else
+                        {
+                            <text>Chưa thanh toán</text>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<!-- Nút thanh toán duy nhất -->
+@if (Model.Schedule != null && Model.Schedule.Any(s => s.Status != "Paid"))
+{
+    <div class="text-center mt-4">
+        <a asp-page="/Home/SchedulePayment" class="btn btn-primary">Thanh toán tất cả lịch hẹn chưa thanh toán</a>
+    </div>
+}
+
+<a asp-page="/Home/Menu" class="btn btn-secondary mt-3">Back</a>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        flatpickr("#appointmentDate", { dateFormat: "Y-m-d", minDate: "today" });
+        flatpickr("#datepicker", {
+            dateFormat: "Y-m-d",
+            onChange: function(selectedDates, dateStr) {
+                let rows = document.querySelectorAll("#scheduleTable tr");
+                rows.forEach(row => {
+                    let rowDate = row.getAttribute("data-date");
+                    row.style.display = (rowDate === dateStr || dateStr === "") ? "" : "none";
+                });
+            }
+        });
+    });
+</script>

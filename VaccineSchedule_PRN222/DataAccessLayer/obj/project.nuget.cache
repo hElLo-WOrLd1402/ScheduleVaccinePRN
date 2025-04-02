@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "LR0/DvDuXfU=",
   "success": true,
   "projectFilePath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
+=======
+  "dgSpecHash": "GtOOmW0SvpE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

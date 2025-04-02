@@ -1,10 +1,10 @@
 ﻿@page
 @model ScheduleVaccineRazor.Pages.Home.ProfileModel
 @{
-    ViewData["Title"] = "Profile";
+    ViewData["Title"] = "Profile Settings";
 }
 
-<h2>Profile</h2>
+<h2>Profile Management</h2>
 
 @if (TempData["Success"] != null)
 {
@@ -15,22 +15,22 @@
     <div class="alert alert-danger">@TempData["Error"]</div>
 }
 
-<!-- Form đổi Username -->
+<!-- Username Update Form -->
 <form method="post">
     <div class="mb-3">
         <label class="form-label">New Username</label>
         <input type="text" class="form-control" asp-for="NewUsername" required>
     </div>
-    <button type="submit" class="btn btn-primary" asp-page-handler="ChangeUsername">Change Username</button>
+    <button type="submit" class="btn btn-primary" asp-page-handler="ChangeUsername">Update Username</button>
 </form>
 
 <hr>
 
-<!-- Form đổi Password -->
+<!-- Password Update Form -->
 <form method="post">
     <div class="mb-3">
         <label class="form-label">New Password</label>
         <input type="password" class="form-control" asp-for="NewPassword" required>
     </div>
-    <button type="submit" class="btn btn-danger" asp-page-handler="ChangePassword">Change Password</button>
+    <button type="submit" class="btn btn-danger" asp-page-handler="ChangePassword">Update Password</button>
 </form>

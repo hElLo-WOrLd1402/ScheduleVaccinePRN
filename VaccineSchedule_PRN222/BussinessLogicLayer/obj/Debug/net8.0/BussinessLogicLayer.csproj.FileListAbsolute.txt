@@ -13,6 +13,7 @@ D:\Tri\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\refint\Bussin
 D:\Tri\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.pdb
 D:\Tri\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.genruntimeconfig.cache
 D:\Tri\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\ref\BussinessLogicLayer.dll
+<<<<<<< Updated upstream
 C:\Users\PC\Desktop\Game\github-is-suck\VaccineSchedule_PRN222\BussinessLogicLayer\bin\Debug\net8.0\BussinessLogicLayer.deps.json
 C:\Users\PC\Desktop\Game\github-is-suck\VaccineSchedule_PRN222\BussinessLogicLayer\bin\Debug\net8.0\BussinessLogicLayer.runtimeconfig.json
 C:\Users\PC\Desktop\Game\github-is-suck\VaccineSchedule_PRN222\BussinessLogicLayer\bin\Debug\net8.0\BussinessLogicLayer.dll
@@ -28,3 +29,19 @@ C:\Users\PC\Desktop\Game\github-is-suck\VaccineSchedule_PRN222\BussinessLogicLay
 C:\Users\PC\Desktop\Game\github-is-suck\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.pdb
 C:\Users\PC\Desktop\Game\github-is-suck\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.genruntimeconfig.cache
 C:\Users\PC\Desktop\Game\github-is-suck\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\ref\BussinessLogicLayer.dll
+=======
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\bin\Debug\net8.0\BussinessLogicLayer.deps.json
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\bin\Debug\net8.0\BussinessLogicLayer.runtimeconfig.json
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\bin\Debug\net8.0\BussinessLogicLayer.dll
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\bin\Debug\net8.0\BussinessLogicLayer.pdb
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.AssemblyInfo.cs
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.dll
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\refint\BussinessLogicLayer.dll
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.pdb
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\BussinessLogicLayer.genruntimeconfig.cache
+C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\BussinessLogicLayer\obj\Debug\net8.0\ref\BussinessLogicLayer.dll
+>>>>>>> Stashed changes

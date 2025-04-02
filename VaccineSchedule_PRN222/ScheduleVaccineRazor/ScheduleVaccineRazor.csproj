@@ -7,6 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< Updated upstream
+=======
+    <Compile Remove="Image\**" />
+    <Content Remove="Image\**" />
+    <EmbeddedResource Remove="Image\**" />
+    <None Remove="Image\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+>>>>>>> Stashed changes
     <ProjectReference Include="..\BussinessLogicLayer\BussinessLogicLayer.csproj" />
     <ProjectReference Include="..\Service\Service.csproj" />
   </ItemGroup>
