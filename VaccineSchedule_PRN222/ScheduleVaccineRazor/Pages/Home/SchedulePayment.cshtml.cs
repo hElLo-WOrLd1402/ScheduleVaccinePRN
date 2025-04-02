@@ -14,14 +14,14 @@ namespace ScheduleVaccineRazor.Pages.Home
         private readonly IScheduleService _scheduleService;
         private readonly IVaccineService _vaccineService;
         private readonly IPaymentService _paymentService;
-        private readonly IVnPayService _vnPayService;
+        //private readonly IVnPayService _vnPayService;
 
-        public SchedulePaymentModel(IScheduleService scheduleService, IVaccineService vaccineService, IPaymentService paymentService, IVnPayService vnPayService)
+        public SchedulePaymentModel(IScheduleService scheduleService, IVaccineService vaccineService, IPaymentService paymentService)
         {
             _scheduleService = scheduleService;
             _vaccineService = vaccineService;
             _paymentService = paymentService;
-            _vnPayService = vnPayService;
+            //_vnPayService = vnPayService;
         }
 
         [BindProperty]

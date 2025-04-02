@@ -1,4 +1,0 @@
-C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\ScheduleVaccineRazor\wwwroot\Image\Childvaccine.jpg
-C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\ScheduleVaccineRazor\wwwroot\Image\Doctorvaccine.jpg
-C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\ScheduleVaccineRazor\wwwroot\Image\vaccine.jpg
-C:\Users\PC\Desktop\Game\ScheduleVaccinePRN-main\VaccineSchedule_PRN222\ScheduleVaccineRazor\wwwroot\Image\vaccineinfo.jpg

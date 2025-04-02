@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-<<<<<<< Updated upstream
-=======
 using Service;
 using System;
 using System.Collections.Generic;
@@ -9,16 +7,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using BussinessLogicLayer;
 using Microsoft.AspNetCore.Http;
->>>>>>> Stashed changes
+
 
 namespace ScheduleVaccineRazor.Pages.Home
 {
     public class MenuModel : PageModel
     {
-<<<<<<< Updated upstream
-        public void OnGet()
-        {
-=======
+
+        
         private readonly IFeedbackService _feedbackService;
         private readonly IScheduleService _scheduleService; // Add IScheduleService to fetch the schedule
         private readonly IHttpContextAccessor _httpContextAccessor;
@@ -99,7 +95,7 @@ namespace ScheduleVaccineRazor.Pages.Home
             }
 
             return RedirectToPage();
->>>>>>> Stashed changes
+        
         }
     }
 }

@@ -1,37 +1,23 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\Service\\Service.csproj": {}
+    "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+    "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
+        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
         "projectName": "BussinessLogicLayer",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\obj\\",
-=======
-    "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\Service\\Service.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
-        "projectName": "BussinessLogicLayer",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\BussinessLogicLayer\\obj\\",
->>>>>>> Stashed changes
+        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj",
+        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
+        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -40,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -97,35 +84,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-<<<<<<< Updated upstream
-    "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\DataAccessLayer\\obj\\",
-=======
-    "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
-        "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\DataAccessLayer\\obj\\",
->>>>>>> Stashed changes
+        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
+        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -134,19 +110,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
-=======
-              "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
->>>>>>> Stashed changes
+              "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
               }
             }
           }
@@ -212,35 +184,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-<<<<<<< Updated upstream
-    "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
+    "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
+        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\Repository\\obj\\",
-=======
-    "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
-        "projectName": "Repository",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\Repository\\obj\\",
->>>>>>> Stashed changes
+        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
+        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -249,25 +210,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
+              "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
               },
-              "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj"
-=======
-              "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
-              },
-              "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj"
->>>>>>> Stashed changes
+              "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -303,35 +257,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-<<<<<<< Updated upstream
-    "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\Service\\Service.csproj": {
+    "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\Service\\Service.csproj",
+        "projectUniqueName": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\Service\\obj\\",
-=======
-    "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\Service\\Service.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\Service\\Service.csproj",
-        "projectName": "Service",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\Service\\obj\\",
->>>>>>> Stashed changes
+        "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\MSI VN\\.nuget\\packages\\",
+        "outputPath": "D:\\Tri\\VaccineSchedule_PRN222\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSI VN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -340,31 +283,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
+              "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
               },
-              "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj"
+              "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Game\\github-is-suck\\VaccineSchedule_PRN222\\Repository\\Repository.csproj"
-=======
-              "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\BussinessLogicLayer\\BussinessLogicLayer.csproj"
-              },
-              "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\DataAccessLayer\\DataAccessLayer.csproj"
-              },
-              "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Game\\ScheduleVaccinePRN-main\\VaccineSchedule_PRN222\\Repository\\Repository.csproj"
->>>>>>> Stashed changes
+              "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj": {
+                "projectPath": "D:\\Tri\\VaccineSchedule_PRN222\\Repository\\Repository.csproj"
               }
             }
           }
@@ -388,6 +321,14 @@
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
             }
           },
           "imports": [
@@ -406,7 +347,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

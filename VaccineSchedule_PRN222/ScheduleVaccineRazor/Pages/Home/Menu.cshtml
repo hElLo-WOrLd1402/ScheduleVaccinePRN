@@ -1,13 +1,8 @@
 ﻿@page
 @model ScheduleVaccineRazor.Pages.Home.MenuModel
 @{
+    var errorMessage = TempData["ErrorMessage"] as string;
 }
-<<<<<<< Updated upstream
-<!-- Bootstrap Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" asp-page="/Home/Index">Schedule Vaccine</a>
-=======
 
 <!-- Medical-themed Header Banner -->
 <div class="container-fluid p-0">
@@ -25,7 +20,6 @@
         </div>
     </div>
 </div>
->>>>>>> Stashed changes
 
 <!-- Bootstrap Navbar with Medical Styling -->
 <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #e3f2fd;">
@@ -34,13 +28,6 @@
             <i class="fas fa-syringe me-2"></i>Schedule Vaccine
         </a>
         <div class="d-flex">
-<<<<<<< Updated upstream
-            <a asp-page="/Home/Profile" class="btn btn-secondary">Profile</a>
-            <a asp-page="/Home/ChildrenProfile" class="btn btn-secondary">Your Children</a>
-        </div>
-    </div>
-</nav>
-=======
             <a asp-page="/Home/ScheduleIndex" class="btn me-2" style="background-color: #4682B4; color: white; border-radius: 20px;">
                 <i class="far fa-calendar-alt me-1"></i> Schedule
             </a>
@@ -245,4 +232,3 @@
         setRating(5);
     }
 </script>
->>>>>>> Stashed changes

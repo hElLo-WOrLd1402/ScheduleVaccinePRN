@@ -1,5 +1,7 @@
 ﻿
 using BussinessLogicLayer;
+using DataAccessLayer.DAO;
+using Repository;
 using Service;
 
 namespace ScheduleVaccineRazor
@@ -11,9 +13,7 @@ namespace ScheduleVaccineRazor
             // Đăng ký các dịch vụ
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IScheduleService, ScheduleService>();
-<<<<<<< Updated upstream
 
-=======
             services.AddScoped<IChildrenProfileService, ChildrenProfileService>();
             services.AddScoped<IVaccineService, VaccineService>();
             services.AddScoped<IPaymentService, PaymentService>();
@@ -23,11 +23,11 @@ namespace ScheduleVaccineRazor
             services.AddScoped<IScheduleRepository, ScheduleRepository>();
             services.AddScoped<IFeedbackService, FeedbackService>();
             services.AddScoped<IFeedbackRepository, FeedbackRepository>();
-            services.AddScoped<IVnPayService, VnPayService>();
+            //services.AddScoped<IVnPayService, VnPayService>();
             services.AddHttpContextAccessor();
             // Đăng ký DAO
             services.AddScoped<FeedbackDAO>();
->>>>>>> Stashed changes
+
             return services;
         }
     }
