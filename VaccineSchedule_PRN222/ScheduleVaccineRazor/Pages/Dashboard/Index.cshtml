@@ -23,16 +23,26 @@
 </div>
 
 <h2 class="mt-4">Biểu đồ doanh thu theo tháng</h2>
-<canvas id="revenueChart"></canvas>
+@if (Model.RevenueByMonth.Any())
+{
+    <canvas id="revenueChart" width="400" height="200"></canvas>
+}
+else
+{
+    <p class="text-danger">Không có dữ liệu để hiển thị biểu đồ.</p>
+}
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var ctx = document.getElementById('revenueChart').getContext('2d');
-        var revenueData = @Html.Raw(Json.Serialize(Model.RevenueByMonth));
+    var revenueData = @Html.Raw(Json.Serialize(Model.RevenueByMonth)) || [];
+    var ctx = document.getElementById('revenueChart')?.getContext('2d');
+        // Nếu không có canvas hoặc dữ liệu, thoát
+        if (!ctx || revenueData.length === 0) return;
 
-        var labels = revenueData.map(x => x.Month);
-        var data = revenueData.map(x => x.Revenue);
+        // Sửa tên property thành camelCase (do JSON serializer mặc định)
+        var labels = revenueData.map(x => x.month);
+        var data = revenueData.map(x => x.revenue);
 
         new Chart(ctx, {
             type: 'bar',
@@ -42,7 +52,6 @@
                     label: 'Doanh thu (VND)',
                     data: data,
                     backgroundColor: 'rgba(75, 192, 192, 0.7)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
                     borderWidth: 1
                 }]
             },
@@ -50,10 +59,16 @@
                 responsive: true,
                 scales: {
                     y: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function (value) {
+                                return value.toLocaleString('vi-VN') + ' VND'; // Định dạng tiền
+                            }
+                        }
                     }
                 }
             }
         });
     });
+
 </script>

@@ -12,8 +12,7 @@ namespace ScheduleVaccineRazor.Pages.Dashboard
     {
         private readonly IScheduleService _scheduleService;
         private readonly IPaymentService _paymentService;
-
-        public IndexModel(IScheduleService scheduleService, IPaymentService paymentService)
+    public IndexModel(IScheduleService scheduleService, IPaymentService paymentService)
         {
             _scheduleService = scheduleService;
             _paymentService = paymentService;
@@ -38,19 +37,24 @@ namespace ScheduleVaccineRazor.Pages.Dashboard
 
             // Lấy doanh thu theo tháng
             RevenueByMonth = completedPayments
-     .Where(p => p.PaymentDate.HasValue) // Lọc bỏ những PaymentDate null
-     .GroupBy(p => new { Year = p.PaymentDate.Value.Year, Month = p.PaymentDate.Value.Month }) // Truy cập an toàn
-     .Select(g => new RevenueData
-     {
-         Month = $"{g.Key.Month}/{g.Key.Year}",
-         Year = g.Key.Year,
-         MonthNumber = g.Key.Month,
-         Revenue = g.Sum(p => p.Amount)
-     })
-     .OrderBy(g => g.Year)
-     .ThenBy(g => g.MonthNumber)
-     .ToList();
+                .Where(p => p.PaymentDate.HasValue)
+                .GroupBy(p => new {
+                    Year = p.PaymentDate.Value.Year,
+                    Month = p.PaymentDate.Value.Month
+                })
+                .Select(g => new RevenueData
+                {
+                    Month = $"{g.Key.Month}/{g.Key.Year}", // Định dạng "Tháng/Năm"
+                    Year = g.Key.Year,
+                    MonthNumber = g.Key.Month,
+                    Revenue = g.Sum(p => p.Amount)
+                })
+                .OrderBy(g => g.Year)
+                .ThenBy(g => g.MonthNumber)
+                .ToList();
 
+            // Đảm bảo không trả về null
+            RevenueByMonth ??= new List<RevenueData>();
 
         }
         public class RevenueData
@@ -62,4 +66,5 @@ namespace ScheduleVaccineRazor.Pages.Dashboard
         }
 
     }
+
 }
