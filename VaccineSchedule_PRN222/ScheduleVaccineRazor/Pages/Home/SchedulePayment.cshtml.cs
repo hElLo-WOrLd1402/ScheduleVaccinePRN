@@ -133,8 +133,5 @@ namespace ScheduleVaccineRazor.Pages.Home
             return RedirectToPage("ScheduleIndex");
         }
 
-
-
-
     }
 }

@@ -69,7 +69,6 @@ namespace ScheduleVaccineRazor.Pages.Home
 
 
 
-
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -79,6 +78,14 @@ namespace ScheduleVaccineRazor.Pages.Home
             }
 
             var scheduleId = await GenerateID();
+
+            // Lấy thông tin vaccine từ VaccineId được chọn
+            var vaccine = await _vaccineService.GetByIdAsync(ScheduleInput.VaccineId);
+            if (vaccine == null)
+            {
+                TempData["ErrorMessage"] = "Vaccine không tồn tại.";
+                return RedirectToPage();
+            }
 
             var newSchedule = new Schedule
             {
@@ -90,8 +97,51 @@ namespace ScheduleVaccineRazor.Pages.Home
             };
 
             await _scheduleService.AddScheduleAsync(newSchedule);
-            TempData["SuccessMessage"] = "Lịch hẹn đã được đặt thành công!";
+
+            // **Tạo Payment sau khi Schedule được tạo**
+            var paymentId = await GeneratePaymentID();
+
+            var newPayment = new Payment
+            {
+                Id = paymentId,
+                ScheduleId = scheduleId,
+                Amount = vaccine.Price, // Lấy giá tiền từ Vaccine
+                PaymentMethod = "Cash",
+                PaymentStatus = "Pending",
+                PaymentDate = DateTime.Now
+            };
+
+            await _paymentService.AddPaymentAsync(newPayment);
+
+            TempData["SuccessMessage"] = "Lịch hẹn đã được đặt thành công! Thanh toán đang chờ xử lý.";
             return RedirectToPage();
+        }
+
+
+        private async Task<string> GeneratePaymentID()
+        {
+            var payments = await _paymentService.GetAllPaymentsAsync();
+            if (payments == null || !payments.Any())
+            {
+                return "P00001";
+            }
+
+            int maxOrder = payments
+                .Select(p => GetPaymentOrder(p.Id))
+                .Max();
+
+            return $"P{(maxOrder + 1).ToString().PadLeft(5, '0')}";
+        }
+
+        private int GetPaymentOrder(string paymentId)
+        {
+            if (string.IsNullOrWhiteSpace(paymentId) || paymentId.Length < 2)
+            {
+                return 0;
+            }
+
+            string orderPart = paymentId.Substring(1);
+            return int.TryParse(orderPart, out int orderNumber) ? orderNumber : 0;
         }
 
         private async Task<string> GenerateID()
