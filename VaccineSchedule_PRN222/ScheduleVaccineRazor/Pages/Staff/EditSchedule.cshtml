@@ -2,52 +2,83 @@
 @model ScheduleVaccineRazor.Pages.Staff.EditScheduleModel
 
 @{
-    ViewData["Title"] = "EditSchedule";
+    ViewData["Title"] = "Edit Schedule";
 }
 
-<h1>EditSchedule</h1>
+<!-- Thêm liên kết Bootstrap và Font Awesome -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<h4>Schedule</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Schedule.Id" />
-            <div class="form-group">
-                <label asp-for="Schedule.ChildId" class="control-label"></label>
-                <select asp-for="Schedule.ChildId" class="form-control" asp-items="ViewBag.ChildId"></select>
-                <span asp-validation-for="Schedule.ChildId" class="text-danger"></span>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Edit Schedule</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h4 class="card-title">Schedule Details</h4>
+                    <hr />
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Schedule.Id" />
+                        <div class="mb-3">
+                            <label asp-for="Schedule.ChildId" class="form-label"></label>
+                            <select asp-for="Schedule.ChildId" class="form-select" asp-items="ViewBag.ChildId"></select>
+                            <span asp-validation-for="Schedule.ChildId" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Schedule.VaccineId" class="form-label"></label>
+                            <select asp-for="Schedule.VaccineId" class="form-select" asp-items="ViewBag.VaccineId"></select>
+                            <span asp-validation-for="Schedule.VaccineId" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Schedule.AppointmentDate" class="form-label"></label>
+                            <input asp-for="Schedule.AppointmentDate" class="form-control" />
+                            <span asp-validation-for="Schedule.AppointmentDate" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Schedule.Status" class="form-label"></label>
+                            <select asp-for="Schedule.Status" class="form-select">
+                                <option value="Scheduled">Scheduled</option>
+                                <option value="Completed">Completed</option>
+                            </select>
+                            <span asp-validation-for="Schedule.Status" class="text-danger"></span>
+                        </div>
+                        <div class="d-grid">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Schedule.VaccineId" class="control-label"></label>
-                <select asp-for="Schedule.VaccineId" class="form-control" asp-items="ViewBag.VaccineId"></select>
-                <span asp-validation-for="Schedule.VaccineId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Schedule.AppointmentDate" class="control-label"></label>
-                <input asp-for="Schedule.AppointmentDate" class="form-control" />
-                <span asp-validation-for="Schedule.AppointmentDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Schedule.Status" class="control-label"></label>
-                <select asp-for="Schedule.Status" class="form-control">
-                    <option value="Scheduled">Scheduled</option>
-                    <option value="Completed">Completed</option>
-                </select>
-                <span asp-validation-for="Schedule.Status" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
+    </div>
+
+    <!-- Nút Quay lại -->
+    <div style="position: fixed; bottom: 20px; left: 20px;">
+        <a href="javascript:history.back()" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Quay lại
+        </a>
     </div>
 </div>
 
-<div>
-    <a asp-page="/Staff/Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
+
+<!-- CSS tùy chỉnh -->
+<style>
+    .card {
+        transition: transform 0.2s;
+    }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+    h1, h4 {
+        font-family: 'Segoe UI', sans-serif;
+    }
+</style>

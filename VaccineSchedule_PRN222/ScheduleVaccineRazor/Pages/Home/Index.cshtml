@@ -4,15 +4,46 @@
     ViewData["Title"] = "Home";
 }
 
-<div class="container d-flex justify-content-center align-items-center vh-100">
-    <div class="card shadow-lg p-4" style="width: 500px;">
-        <h2 class="text-center mb-3">Welcome to Schedule Vaccine</h2>
+<div class="text-center">
+    <!-- Banner with image -->
+    <div class="position-relative" style="background-color: #007bff; min-height: 400px;">
+        <img src="https://images.unsplash.com/photo-1612277795068-2b67e16d936e" class="img-fluid w-100" style="max-height: 400px; object-fit: cover;" alt="Vaccine Banner" onerror="this.style.display='none';">
+        <div class="position-absolute top-50 start-50 translate-middle text-white bg-dark bg-opacity-75 p-4 rounded w-75">
+            <h1 class="display-4 fw-bold mb-3">Welcome to Schedule Vaccine</h1>
+            <p class="lead">Easily, safely, and quickly register for your vaccine.</p>
+        </div>
+    </div>
 
-        <div class="text-center mb-4">
-            <a asp-page="/Accounts/Register" class="btn btn-primary me-2">Register</a>
-            <a asp-page="/Accounts/Login" class="btn btn-success">Login</a>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2784/2784488.png" class="me-2" style="width: 40px; height: 40px;" alt="Doctor Icon">
+                            <h4 class="card-title text-primary mb-0">Get Started Today</h4>
+                        </div>
+                        <p class="card-text">Choose one of the options below to proceed:</p>
+                        <div class="d-flex justify-content-center gap-3 mt-4">
+                            <a asp-page="/Accounts/Resgister" class="btn btn-success btn-lg">Register</a>
+                            <a asp-page="/Accounts/Login" class="btn btn-outline-primary btn-lg">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-      
+        <!-- Information section with icon -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="alert alert-info text-start d-flex align-items-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2966/2966332.png" class="me-3" style="width: 40px; height: 40px;" alt="Vaccine Icon">
+                    <div>
+                        <h5 class="alert-heading">Important Information</h5>
+                        <p>Please prepare your personal information before registering. You will receive a confirmation email upon completion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
