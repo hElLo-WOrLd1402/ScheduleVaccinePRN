@@ -156,8 +156,8 @@
         {
             @foreach (var item in Model.Schedule)
             {
-                <tr data-date="@item.AppointmentDate.ToString("yyyy-MM-dd")">
-                    <td>@item.AppointmentDate.ToString("yyyy-MM-dd")</td>
+                <tr data-date="@item.AppointmentDate.ToString("yyyy-MM-dd HH:mm")">
+                    <td>@item.AppointmentDate.ToString("yyyy-MM-dd HH:mm")</td>
                     <td>@item.Status</td>
                     <td>@item.Child.FullName</td>
                     <td>@item.Vaccine.Name</td>
@@ -199,9 +199,16 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        flatpickr("#appointmentDate", { dateFormat: "Y-m-d", minDate: "today" });
+        flatpickr("#appointmentDate", { dateFormat: "Y-m-d H:i", minDate: "today" , enableTime: true,  // Enable time picker
+            noCalendar: false,  // Keep the calendar visible
+            time_24hr: true,   // Use 24-hour time format
+            minuteIncrement: 5});
         flatpickr("#datepicker", {
-            dateFormat: "Y-m-d",
+            dateFormat: "Y-m-d H:i", 
+            enableTime: true,  // Enable time picker
+            noCalendar: false,  // Keep the calendar visible
+            time_24hr: true,   // Use 24-hour time format
+            minuteIncrement: 5,
             onChange: function(selectedDates, dateStr) {
                 let rows = document.querySelectorAll("#scheduleTable tr");
                 rows.forEach(row => {
