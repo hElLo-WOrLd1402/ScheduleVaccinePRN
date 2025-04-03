@@ -34,7 +34,7 @@ namespace Service
             }
 
             // Hash mật khẩu trước khi lưu vào database
-            account.PasswordHash = BCrypt.Net.BCrypt.HashPassword(newPassword);
+            account.PasswordHash = newPassword;
             return await accountRepository.UpdateAccountAsync(account);
         }
 
@@ -62,7 +62,7 @@ namespace Service
             }
 
             // Hash mật khẩu trước khi lưu (nếu có)
-            account.PasswordHash = BCrypt.Net.BCrypt.HashPassword(account.PasswordHash);
+            account.PasswordHash = account.PasswordHash;
 
             return await accountRepository.CreateAccountAsync(account);
         }

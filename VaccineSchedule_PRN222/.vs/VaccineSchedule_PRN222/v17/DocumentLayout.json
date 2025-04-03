@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5B63174D-400B-49B3-9E9F-FD4ECA5ED6CA}|ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj|d:\\github\\schedulevaccineprn\\vaccineschedule_prn222\\schedulevaccinerazor\\pages\\accounts\\resgister.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B63174D-400B-49B3-9E9F-FD4ECA5ED6CA}|ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj|solutionrelative:schedulevaccinerazor\\pages\\accounts\\resgister.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5924F8BC-5161-4AB5-9811-480806E6D03B}|Service\\Service.csproj|d:\\github\\schedulevaccineprn\\vaccineschedule_prn222\\service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5924F8BC-5161-4AB5-9811-480806E6D03B}|Service\\Service.csproj|solutionrelative:service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA932144-35F0-4EA5-944F-57E7A17D96C5}|DataAccessLayer\\DataAccessLayer.csproj|d:\\github\\schedulevaccineprn\\vaccineschedule_prn222\\dataaccesslayer\\dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA932144-35F0-4EA5-944F-57E7A17D96C5}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B63174D-400B-49B3-9E9F-FD4ECA5ED6CA}|ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj|d:\\github\\schedulevaccineprn\\vaccineschedule_prn222\\schedulevaccinerazor\\pages\\accounts\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B63174D-400B-49B3-9E9F-FD4ECA5ED6CA}|ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj|solutionrelative:schedulevaccinerazor\\pages\\accounts\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C971A65-C07E-4154-9E0B-BEBDF6B850C1}|Repository\\Repository.csproj|d:\\github\\schedulevaccineprn\\vaccineschedule_prn222\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C971A65-C07E-4154-9E0B-BEBDF6B850C1}|Repository\\Repository.csproj|solutionrelative:repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B63174D-400B-49B3-9E9F-FD4ECA5ED6CA}|ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj|d:\\github\\schedulevaccineprn\\vaccineschedule_prn222\\schedulevaccinerazor\\pages\\accounts\\resgister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B63174D-400B-49B3-9E9F-FD4ECA5ED6CA}|ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj|solutionrelative:schedulevaccinerazor\\pages\\accounts\\resgister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5B63174D-400B-49B3-9E9F-FD4ECA5ED6CA}|ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj|d:\\github\\schedulevaccineprn\\vaccineschedule_prn222\\schedulevaccinerazor\\pages\\staff\\deleteschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5B63174D-400B-49B3-9E9F-FD4ECA5ED6CA}|ScheduleVaccineRazor\\ScheduleVaccineRazor.csproj|solutionrelative:schedulevaccinerazor\\pages\\staff\\deleteschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -54,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 21,
+          "SelectedChildIndex": 22,
           "Children": [
             {
               "$type": "Bookmark",
@@ -142,7 +166,85 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\Service\\AccountService.cs",
+              "RelativeDocumentMoniker": "Service\\AccountService.cs",
+              "ToolTip": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\Service\\AccountService.cs",
+              "RelativeToolTip": "Service\\AccountService.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAswEAAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:47:06.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Resgister.cshtml.cs",
+              "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Accounts\\Resgister.cshtml.cs",
+              "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Accounts\\Resgister.cshtml.cs",
+              "ToolTip": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Accounts\\Resgister.cshtml.cs",
+              "RelativeToolTip": "ScheduleVaccineRazor\\Pages\\Accounts\\Resgister.cshtml.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:43:57.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Accounts\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Accounts\\Login.cshtml.cs",
+              "ToolTip": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Accounts\\Login.cshtml.cs",
+              "RelativeToolTip": "ScheduleVaccineRazor\\Pages\\Accounts\\Login.cshtml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAkwB4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:40:36.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\Repository\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\AccountRepository.cs",
+              "ToolTip": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\Repository\\AccountRepository.cs",
+              "RelativeToolTip": "Repository\\AccountRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAArwBAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:39:33.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountDAO.cs",
+              "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\DataAccessLayer\\DAO\\AccountDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DAO\\AccountDAO.cs",
+              "ToolTip": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\DataAccessLayer\\DAO\\AccountDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\DAO\\AccountDAO.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwA4AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:35:53.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Resgister.cshtml",
+              "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Accounts\\Resgister.cshtml",
+              "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Accounts\\Resgister.cshtml",
+              "ToolTip": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Accounts\\Resgister.cshtml",
+              "RelativeToolTip": "ScheduleVaccineRazor\\Pages\\Accounts\\Resgister.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T00:35:05.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DeleteSchedule.cshtml",
               "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Staff\\DeleteSchedule.cshtml",
               "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Staff\\DeleteSchedule.cshtml",
@@ -155,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "EditSchedule.cshtml",
               "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Staff\\EditSchedule.cshtml",
               "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Staff\\EditSchedule.cshtml",
@@ -163,12 +265,11 @@
               "RelativeToolTip": "ScheduleVaccineRazor\\Pages\\Staff\\EditSchedule.cshtml",
               "ViewState": "AgIAACkAAAAAAAAAAAAuwFMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T13:06:06.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T13:06:06.533Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Staff\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Staff\\Index.cshtml.cs",
@@ -176,12 +277,11 @@
               "RelativeToolTip": "ScheduleVaccineRazor\\Pages\\Staff\\Index.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T13:04:04.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T13:04:04.162Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Staff\\Index.cshtml",
               "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Staff\\Index.cshtml",
@@ -189,12 +289,11 @@
               "RelativeToolTip": "ScheduleVaccineRazor\\Pages\\Staff\\Index.cshtml",
               "ViewState": "AgIAADwAAAAAAAAAAAAAAE4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T13:03:29.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T13:03:29.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "ChildrenProfile.cshtml",
               "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Home\\ChildrenProfile.cshtml",
               "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Home\\ChildrenProfile.cshtml",
@@ -202,12 +301,11 @@
               "RelativeToolTip": "ScheduleVaccineRazor\\Pages\\Home\\ChildrenProfile.cshtml",
               "ViewState": "AgIAAKEAAAAAAAAAAAAuwLgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T12:47:08.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:47:08.126Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Profile.cshtml",
               "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Home\\Profile.cshtml",
               "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Home\\Profile.cshtml",
@@ -215,12 +313,11 @@
               "RelativeToolTip": "ScheduleVaccineRazor\\Pages\\Home\\Profile.cshtml",
               "ViewState": "AgIAAAQAAAAAAAAAAAAuwHUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T12:41:47.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:41:47.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Home\\Index.cshtml",
@@ -228,12 +325,11 @@
               "RelativeToolTip": "ScheduleVaccineRazor\\Pages\\Home\\Index.cshtml",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T12:39:06.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:39:06.029Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Dashboard\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Dashboard\\Index.cshtml.cs",
@@ -241,12 +337,11 @@
               "RelativeToolTip": "ScheduleVaccineRazor\\Pages\\Dashboard\\Index.cshtml.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAswEUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:34:14.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:34:14.078Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Dashboard\\Index.cshtml",
               "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Dashboard\\Index.cshtml",
@@ -254,12 +349,11 @@
               "RelativeToolTip": "ScheduleVaccineRazor\\Pages\\Dashboard\\Index.cshtml",
               "ViewState": "AgIAADYAAAAAAAAAAAAAAH4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T12:33:12.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:33:12.748Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\appsettings.json",
               "RelativeDocumentMoniker": "ScheduleVaccineRazor\\appsettings.json",
@@ -271,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "UpdateChildrenProfile.cshtml",
               "DocumentMoniker": "D:\\Github\\ScheduleVaccinePRN\\VaccineSchedule_PRN222\\ScheduleVaccineRazor\\Pages\\Home\\UpdateChildrenProfile.cshtml",
               "RelativeDocumentMoniker": "ScheduleVaccineRazor\\Pages\\Home\\UpdateChildrenProfile.cshtml",

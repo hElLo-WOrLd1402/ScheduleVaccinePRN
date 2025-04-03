@@ -51,7 +51,7 @@ namespace ScheduleVaccineRazor.Pages.Accounts
                     Id = newAccountId,
                     Email = RegisterData.Email,
                     Username = RegisterData.Username,
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(RegisterData.Password), // Hash mật khẩu
+                    PasswordHash = RegisterData.Password, // Hash mật khẩu
                     Role = "Customer",
                     Status = "Active",
                     CreatedTime = DateTime.UtcNow,
